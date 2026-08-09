@@ -6,20 +6,6 @@ BAI is a research application used by enrolled participants of a study approved
 by **Sikt — the Norwegian Agency for Shared Services in Education and Research**
 (reference **196375**).
 
-> ## ⚠ DRAFT — not yet final
->
-> The sections describing **the software** are accurate and complete: what BAI
-> sends, what it keeps on the device, and which permissions it asks for. Those
-> were written from the source code.
->
-> The sections describing **the study** are not finished. Anything marked
-> **[CONFIRM]** — the data controller, how long the roster is kept, the legal
-> basis for processing, and how to withdraw — needs the study team, and must be
-> reconciled with the information letter and consent form approved by Sikt.
-> Where the two differ, the Sikt-approved documents govern.
->
-> This banner should be removed once those are filled in.
-
 ---
 
 ## The short version
@@ -100,20 +86,28 @@ with the corresponding feature switched off.
 Deleting the app from your phone removes everything BAI has stored: your
 history, your mood record, your places, and your signed-in session.
 
-Your entry on the participant roster is held by the study team. Same voluntary participation in the research inform consent applies here. To drop out of the study contact the study team using the details below. 
-email: daviasam@uio.no
+Your entry on the participant roster is held by the study team. Taking part in
+the study is voluntary, on the same terms as the consent you gave when you
+enrolled — you may withdraw at any time and do not have to give a reason.
+
+To withdraw, email **daviasam@uio.no**.
 
 ---
 
 ## Data retention and responsibility
 
-**[CONFIRM]** — the following must match what Sikt approved:
+**Data controller:** Aparecido Fabiano Pinatti de Carvalho.
 
-- Data controller - Aparecido Fabiano Pinatti de Carvalho
-- How long the participant roster is retained, and when it is deleted - Data will be retained till 3.1.2028 and afterwards deleted. 
-- Whether any data is exported from participants' devices at the end of the
-  study, and if so, how and with what consent - No data is exported out of the users phone
-- The legal basis for processing under GDPR - Public interest (General Data Protection Regulation art. 6 nr .1 e)
+**Legal basis:** processing is carried out in the public interest, under
+Article 6(1)(e) of the General Data Protection Regulation.
+
+**Retention:** the participant roster is kept until **3 January 2028**, and
+deleted afterwards.
+
+**Nothing is exported from participants' devices** — not during the study, and
+not at the end of it. What BAI records about how you work stays on your phone
+for as long as the app is installed, and goes when you delete it. The roster
+described above is the only data the study holds centrally.
 
 ---
 
@@ -135,4 +129,7 @@ communicated to participants directly.
 
 **David Sampah**
 Department of Informatics, University of Oslo
+Email: daviasam@uio.no
 https://www.mn.uio.no/ifi/english/people/aca/daviasam/
+
+**Data controller:** Aparecido Fabiano Pinatti de Carvalho
