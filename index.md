@@ -100,9 +100,8 @@ with the corresponding feature switched off.
 Deleting the app from your phone removes everything BAI has stored: your
 history, your mood record, your places, and your signed-in session.
 
-Your entry on the participant roster is held by the study team. To have it
-removed, contact the study team using the details below. **[CONFIRM: describe
-the roster-withdrawal process the study team follows.]**
+Your entry on the participant roster is held by the study team. Same voluntary participation in the research inform consent applies here. To drop out of the study contact the study team using the details below. 
+email: daviasam@uio.no
 
 ---
 
@@ -110,11 +109,11 @@ the roster-withdrawal process the study team follows.]**
 
 **[CONFIRM]** — the following must match what Sikt approved:
 
-- Who the data controller is
-- How long the participant roster is retained, and when it is deleted
+- Data controller - Aparecido Fabiano Pinatti de Carvalho
+- How long the participant roster is retained, and when it is deleted - Data will be retained till 3.1.2028 and afterwards deleted. 
 - Whether any data is exported from participants' devices at the end of the
-  study, and if so, how and with what consent
-- The legal basis for processing under GDPR
+  study, and if so, how and with what consent - No data is exported out of the users phone
+- The legal basis for processing under GDPR - Public interest (General Data Protection Regulation art. 6 nr .1 e)
 
 ---
 
