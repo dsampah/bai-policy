@@ -74,7 +74,6 @@ own operating system is contacted.
 | **Location** | To switch modes when you reach a place you marked, and — with Motion enabled — to notice when you are travelling |
 | **Calendar** | To measure how booked a day is |
 | **Notifications** | To alert you when a day is booked past what it holds |
-| **Camera / Photos** | Only if you choose to set a profile picture |
 
 Every one of these can be refused, and BAI continues to work without them —
 with the corresponding feature switched off.
