@@ -27,12 +27,21 @@ towards a PhD in Informatics. Data collected is used for this project only.
 postdoctoral researchers and PhD research fellows. A maximum of 20 participants.
 Participants are adults; the study does not involve minors.
 
+**Recruitment is closed, and consent was given before the app.** The project's
+participants were recruited and enrolled in earlier phases of the study, and
+each gave written informed consent to the study team at that time, before BAI
+existed. **No new participants are being recruited**, and there is no way to
+join the study through the app: BAI has no sign-up, and a person who is not
+already on the participant roster cannot sign in or use any part of it. The
+roster is how the consent given earlier is enforced in the software.
+
 **What taking part in this phase involves.** BAI is the artefact built in the
-project's design phase. In the appropriation phase, participants use the app
-over a period of ordinary working life and then report on how it worked in
-practice — through an interview. Using the app means letting it read your calendar and, if you choose, your location, so that
-it can show you your own working patterns. Everything it records stays on your
-phone; see the sections below.
+project's design phase, with the participants themselves. In the appropriation
+phase — the phase this app belongs to — those same participants use it over a
+period of ordinary working life and then report on how it worked in practice,
+through an interview. Using the app means letting it read your calendar and, if
+you choose, your location, so that it can show you your own working patterns.
+Everything it records stays on your phone; see the sections below.
 
 **Risks and benefits.** BAI holds no participant data centrally and transmits
 nothing but the sign-in check described below, so the foreseeable risks are
@@ -66,10 +75,11 @@ kind.
 
 **Your phone number and PIN, at sign-in only.**
 
-There is no sign-up in BAI. The study team enrols each participant's phone
-number on a roster in advance. When you sign in, the app asks the study's
-server two things: whether that number is enrolled, and whether the PIN matches
-it.
+There is no sign-up in BAI, and none can be added — recruitment for the study is
+closed. The study team enrolled each participant's phone number on a roster in
+advance, after that participant had consented. When you sign in, the app asks
+the study's server two things: whether that number is enrolled, and whether the
+PIN matches it.
 
 **The roster holds nothing but phone numbers and PINs.** It carries no names,
 no job titles, no background and no location — it is a register of who is
