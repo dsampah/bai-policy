@@ -30,8 +30,7 @@ Participants are adults; the study does not involve minors.
 **What taking part in this phase involves.** BAI is the artefact built in the
 project's design phase. In the appropriation phase, participants use the app
 over a period of ordinary working life and then report on how it worked in
-practice — through observation, a focus group, or written notes. Using the app
-means letting it read your calendar and, if you choose, your location, so that
+practice — through an interview. Using the app means letting it read your calendar and, if you choose, your location, so that
 it can show you your own working patterns. Everything it records stays on your
 phone; see the sections below.
 
