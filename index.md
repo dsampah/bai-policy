@@ -1,10 +1,50 @@
 # BAI — Privacy Policy
 
-**Last updated:** 9 August 2026
+**Last updated:** 20 August 2026
 
-BAI is a research application used by enrolled participants of a study approved
+BAI is a research application used by enrolled participants of a study assessed
 by **Sikt — the Norwegian Agency for Shared Services in Education and Research**
 (reference **196375**).
+
+---
+
+## The research
+
+| | |
+|---|---|
+| **Project** | Design of Technology for Work Life Balance |
+| **Institution responsible (data controller)** | University of Oslo, Faculty of Mathematics and Natural Sciences, Department of Informatics |
+| **Project leader** | Aparecido Fabiano Pinatti de Carvalho |
+| **Ethics and data protection assessment** | Sikt, reference 196375, assessed 4 April 2024 |
+| **Project period** | 2 May 2024 – 15 December 2027 |
+
+**Purpose.** The project investigates how people use digital technologies to
+negotiate the boundary between work and life, and what design opportunities
+exist for technologies that support that negotiation. It is doctoral research
+towards a PhD in Informatics. Data collected is used for this project only.
+
+**Who takes part.** Higher-education professionals — professors at all levels,
+postdoctoral researchers and PhD research fellows. A maximum of 20 participants.
+Participants are adults; the study does not involve minors.
+
+**What taking part in this phase involves.** BAI is the artefact built in the
+project's design phase. In the appropriation phase, participants use the app
+over a period of ordinary working life and then report on how it worked in
+practice — through observation, a focus group, or written notes. Using the app
+means letting it read your calendar and, if you choose, your location, so that
+it can show you your own working patterns. Everything it records stays on your
+phone; see the sections below.
+
+**Risks and benefits.** BAI holds no participant data centrally and transmits
+nothing but the sign-in check described below, so the foreseeable risks are
+limited to those of having an app read your calendar and location **on your own
+device** — all of which is processed locally and deleted with the app. Taking
+part carries no payment. The benefit to participants is insight into their own
+workload and working patterns; the benefit to the field is knowledge about
+designing technology for work–life balance.
+
+**Taking part is voluntary.** You may withdraw your consent at any time, without
+giving a reason and with no negative consequences. See *Deleting your data*.
 
 ---
 
@@ -95,13 +135,16 @@ To withdraw, email **daviasam@uio.no**.
 
 ## Data retention and responsibility
 
-**Data controller:** Aparecido Fabiano Pinatti de Carvalho.
+**Data controller:** the University of Oslo, Faculty of Mathematics and Natural
+Sciences, Department of Informatics. The project leader is Aparecido Fabiano
+Pinatti de Carvalho.
 
 **Legal basis:** processing is carried out in the public interest, under
-Article 6(1)(e) of the General Data Protection Regulation.
+Article 6(1)(e) of the General Data Protection Regulation, as assessed by Sikt
+under reference 196375.
 
-**Retention:** the participant roster is kept until **3 January 2028**, and
-deleted afterwards.
+**Retention:** the participant roster is kept until the end of the project on
+**15 December 2027**, and deleted afterwards.
 
 **Nothing is exported from participants' devices** — not during the study, and
 not at the end of it. What BAI records about how you work stays on your phone
@@ -110,10 +153,25 @@ described above is the only data the study holds centrally.
 
 ---
 
+## Your rights
+
+So long as you can be identified in the data held, you have the right to:
+
+- access the personal data held about you
+- request that it is deleted
+- request that inaccurate data about you is corrected
+- receive a copy of it (data portability)
+- send a complaint to the Norwegian Data Protection Authority about how your
+  personal data is processed
+
+To exercise any of these, email **daviasam@uio.no**.
+
+---
+
 ## Children
 
 BAI is not directed at children and is used only by enrolled adult study
-participants.
+participants — professors, postdoctoral researchers and PhD research fellows.
 
 ---
 
@@ -126,9 +184,18 @@ communicated to participants directly.
 
 ## Contact
 
-**David Sampah**
+Questions about the project, or about exercising your rights:
+
+**David Sampah** — PhD Research Fellow
 Department of Informatics, University of Oslo
 Email: daviasam@uio.no
 https://www.mn.uio.no/ifi/english/people/aca/daviasam/
 
-**Data controller:** Aparecido Fabiano Pinatti de Carvalho
+Supervisor and project leader:
+**Dr Aparecido Fabiano Pinatti de Carvalho** — fabiano.pinatti@ifi.uio.no
+
+**Data controller:** University of Oslo, Faculty of Mathematics and Natural
+Sciences, Department of Informatics.
+
+Questions about how data protection has been assessed in this project:
+**Sikt** — personverntjenester@sikt.no, +47 73 98 40 40
