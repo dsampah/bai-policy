@@ -43,13 +43,20 @@ through an interview. Using the app means letting it read your calendar and, if
 you choose, your location, so that it can show you your own working patterns.
 Everything it records stays on your phone; see the sections below.
 
-**Risks and benefits.** BAI holds no participant data centrally and transmits
-nothing but the sign-in check described below, so the foreseeable risks are
-limited to those of having an app read your calendar and location **on your own
-device** — all of which is processed locally and deleted with the app. Taking
-part carries no payment. The benefit to participants is insight into their own
-workload and working patterns; the benefit to the field is knowledge about
-designing technology for work–life balance.
+**Risks.** The risks are low. BAI keeps everything it records on your own phone
+and transmits nothing but the sign-in check, so your working patterns, calendar
+and location never reach the researcher, the University, or anyone else. What
+remains is ordinary: anyone with your unlocked phone could see what BAI shows,
+and its notifications may appear on your lock screen — both can be limited in
+your phone's settings, and deleting the app removes everything it holds. You may
+also find it uncomfortable to see your own working patterns set out. The
+interview will ask about your workload and work–life boundaries, which may touch
+on stress or family; you may decline any question, or ask for anything you have
+said to be deleted.
+
+**Benefits.** There is no payment. You get a clearer view of your own workload,
+which may help you negotiate your boundaries at work. The wider benefit is to
+knowledge about designing technology for work–life balance.
 
 **Taking part is voluntary.** You may withdraw your consent at any time, without
 giving a reason and with no negative consequences. See *Deleting your data*.
