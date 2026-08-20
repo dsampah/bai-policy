@@ -16,7 +16,7 @@ by **Sikt — the Norwegian Agency for Shared Services in Education and Research
 | **Institution responsible (data controller)** | University of Oslo, Faculty of Mathematics and Natural Sciences, Department of Informatics |
 | **Project leader** | Aparecido Fabiano Pinatti de Carvalho |
 | **Ethics and data protection assessment** | Sikt, reference 196375, assessed 4 April 2024 |
-| **Project period** | 2 May 2024 – 15 December 2027 |
+| **Project period** | 2 May 2024 – August 2027 |
 
 **Purpose.** The project investigates how people use digital technologies to
 negotiate the boundary between work and life, and what design opportunities
@@ -152,8 +152,8 @@ Pinatti de Carvalho.
 Article 6(1)(e) of the General Data Protection Regulation, as assessed by Sikt
 under reference 196375.
 
-**Retention:** the participant roster is kept until the end of the project on
-**15 December 2027**, and deleted afterwards.
+**Retention:** the participant roster is kept until the end of the project in
+**August 2027**, and deleted afterwards.
 
 **Nothing is exported from participants' devices** — not during the study, and
 not at the end of it. What BAI records about how you work stays on your phone
