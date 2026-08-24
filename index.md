@@ -114,8 +114,7 @@ All of the following is read and stored locally, and is never sent anywhere:
   store off-device, or transmit your calendar
 - **Places** — the locations you mark for Work or Life, held as coordinates
 - **Your location** — read from the operating system to work out whether you
-  have arrived at a place you marked, and to notice when you have been
-  travelling. Readings are used in the moment and are not uploaded
+  have arrived at a place you marked. Readings are used in the moment and are not uploaded
 
 If you have marked a place, BAI compares your current position to it entirely
 on the device. No map service, geocoder, or location provider outside Apple's
