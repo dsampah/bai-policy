@@ -127,7 +127,7 @@ own operating system is contacted.
 
 | Permission | Why |
 |---|---|
-| **Location** | To switch modes when you reach a place you marked, and — with Motion enabled — to notice when you are travelling |
+| **Location** | To switch modes when you reach a place you marked |
 | **Calendar** | To measure how booked a day is |
 | **Notifications** | To alert you when a day is booked past what it holds |
 
