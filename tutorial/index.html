@@ -1,0 +1,541 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Using BAI — a guided tour</title>
+<style>
+  :root{
+    --ink:#1D3D4C; --body:#40525c; --muted:#6b7b85;
+    --bg:#E7E8EA; --card:#fff; --line:#d7dbde;
+    --accent:#2F6B60; --accent-soft:#e6efec; --warn:#B4532F;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; background:var(--bg); color:var(--body);
+    font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Helvetica,Arial,sans-serif;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:0 20px 80px}
+  header{padding:64px 0 40px;border-bottom:1px solid var(--line);margin-bottom:8px}
+  h1{font-size:2.4rem;line-height:1.15;margin:0 0 12px;color:var(--ink);letter-spacing:-.02em}
+  .lede{font-size:1.12rem;max-width:62ch;margin:0 0 20px}
+  .note{
+    background:var(--accent-soft);border-left:3px solid var(--accent);
+    padding:14px 18px;border-radius:0 8px 8px 0;font-size:.94rem;max-width:70ch;margin:24px 0 0;
+  }
+  nav{margin:34px 0 0}
+  nav ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
+  nav a{
+    display:inline-block;padding:8px 16px;background:var(--card);border:1px solid var(--line);
+    border-radius:999px;text-decoration:none;color:var(--ink);font-weight:600;font-size:.92rem;
+  }
+  nav a:hover{border-color:var(--accent);color:var(--accent)}
+  section{padding:56px 0 8px;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  .eyebrow{
+    text-transform:uppercase;letter-spacing:.14em;font-size:.74rem;font-weight:700;
+    color:var(--accent);margin:0 0 6px;
+  }
+  h2{font-size:1.7rem;margin:0 0 10px;color:var(--ink);letter-spacing:-.01em}
+  h2 + p{max-width:64ch}
+  .step{
+    display:grid;grid-template-columns:1fr 300px;gap:36px;align-items:start;
+    padding:32px 0;border-top:1px solid var(--line);
+  }
+  .step:first-of-type{border-top:0}
+  .step-body h3{
+    font-size:1.06rem;margin:0 0 8px;color:var(--ink);
+  }
+  .step-body h3 .num{
+    display:inline-flex;align-items:center;justify-content:center;
+    width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;
+    font-size:.82rem;margin-right:10px;vertical-align:2px;
+  }
+  .step-body p{margin:0 0 10px;max-width:56ch}
+  .step-body ul{margin:10px 0 0;padding-left:20px;max-width:56ch}
+  .step-body li{margin:6px 0}
+  figure{margin:0}
+  figure img{
+    width:100%;height:auto;display:block;border-radius:var(--radius);
+    border:1px solid var(--line);background:var(--card);
+  }
+  figcaption{font-size:.82rem;color:var(--muted);margin-top:8px;text-align:center}
+  .callout{
+    background:var(--card);border:1px solid var(--line);border-radius:10px;
+    padding:14px 18px;font-size:.93rem;margin:14px 0 0;max-width:56ch;
+  }
+  .callout strong{color:var(--ink)}
+  .why{color:var(--muted);font-style:italic}
+  footer{padding:44px 0 0;color:var(--muted);font-size:.88rem}
+  @media (max-width:760px){
+    .step{grid-template-columns:1fr;gap:20px}
+    figure{max-width:320px;margin:0 auto}
+    h1{font-size:1.9rem}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Using BAI</h1>
+  <p class="lede">
+    BAI helps you understand your workload and become more aware of your worklife boundaries. 
+    It can support you in communicating and negotiating these boundaries with others, 
+    including how and when you are reachable. This guide takes you through the app step by step, 
+    from initial setup to everyday use: <strong>Controls</strong>, then <strong>Schedule</strong>,
+    <strong>Status</strong>, <strong>Mood</strong>, and finally <strong>Insights</strong>.
+  </p>
+  <p class="lede">
+    Each step below has the screen you should be looking at. Follow it in order the
+    first time; after that, dip into whichever section you need.
+  </p>
+  <div class="note">
+    The screenshots show a demonstration account with sample calendar entries and a
+    fortnight of history, so every panel has something in it. Your own app will look
+    emptier for the first few days — that is expected, and Insights says so until it
+    has enough to go on.
+  </div>
+  <nav>
+    <ol>
+      <li><a href="#controls">1 · Controls</a></li>
+      <li><a href="#schedule">2 · Schedule</a></li>
+      <li><a href="#status">3 · Status</a></li>
+      <li><a href="#mood">4 · Mood</a></li>
+      <li><a href="#insights">5 · Insights</a></li>
+      <li><a href="../">Privacy Policy</a></li>
+    </ol>
+  </nav>
+</header>
+
+<section id="home">
+  <p class="eyebrow">Before you start</p>
+  <h2>The dashboard</h2>
+  <p>
+    This is what opens when you launch BAI, and where the tour begins and ends.
+  </p>
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">·</span>What you are looking at</h3>
+      <ul>
+        <li><strong>The arc</strong> is your current status — here, <em>Available</em>.</li>
+        <li><strong>The chip under the title</strong> is your mode, Work or Life.</li>
+        <li><strong>The face, top right,</strong> is your last check-in. Tap it to update how you feel.</li>
+        <li><strong>The four tiles</strong> are the rest of the app.</li>
+        <li><strong>The card at the bottom</strong> reads your calendar: hours booked, how many
+            events, and whether the day is balanced.</li>
+      </ul>
+      <div class="callout">
+        <strong>Today / Week / Month</strong> switches the figures between one day, this
+        week and this month. The calendar button beside them lets you pick any stretch
+        of days instead.
+      </div>
+    </div>
+    <figure>
+      <img src="img/dashboard.png" alt="The BAI dashboard showing an Available status, four tiles, and today's calendar figures">
+      <figcaption>The dashboard</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="controls">
+  <p class="eyebrow">Step 1</p>
+  <h2>Controls — tell BAI when you work</h2>
+  <p>
+    Start here. Controls is where you set the working pattern everything else is
+    measured against, and choose what BAI is allowed to read.
+  </p>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">1</span>Turn the schedule on</h3>
+      <p>
+        From the dashboard, tap <strong>Controls</strong>. Switch
+        <strong>Schedule</strong> on to let BAI move you between Work and Life mode
+        by itself.
+      </p>
+      <p>
+        Tap the day letters to pick your working days — selected days are filled in.
+        Weekends are off by default.
+      </p>
+      <p class="why">
+        Turn the schedule off on holidays and days off. BAI then leaves your mode
+        alone until you switch it back on.
+      </p>
+    </div>
+    <figure>
+      <img src="img/controls-schedule.png" alt="Controls screen with the Schedule switch on and Monday to Friday selected">
+      <figcaption>Controls · work schedule</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">2</span>Choose how your hours are decided</h3>
+      <p>Three ways, and you pick one:</p>
+      <ul>
+        <li><strong>Fixed hours</strong> — the same window every working day. Tap
+            <em>Work hours</em> to set it.</li>
+        <li><strong>Custom hours</strong> — a different window for each day.</li>
+        <li><strong>By location</strong> — where you are decides. You pin a place that
+            means Work and one that means Life.</li>
+      </ul>
+      <div class="callout">
+        <strong>If you choose By location</strong> and have not pinned anywhere yet, BAI
+        says so in red rather than switching nothing silently. Tap
+        <em>Locations</em> to add places.
+      </div>
+    </div>
+    <figure>
+      <img src="img/controls-calendar.png" alt="Controls screen showing Fixed hours selected with work hours nine to five, and the Calendar switch on">
+      <figcaption>Controls · hours and calendar</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">3</span>Connect your calendar</h3>
+      <p>
+        Scroll to <strong>What BAI reads</strong> and switch <strong>Calendar</strong>
+        on. Your phone will ask permission the first time.
+      </p>
+      <p>
+        BAI only ever <em>reads</em> your calendar. It never adds, edits or deletes
+        anything.
+      </p>
+    </div>
+    <figure>
+      <img src="img/controls-calendar.png" alt="Controls screen with the Calendar switch on under What BAI reads">
+      <figcaption>Controls · what BAI reads</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">4</span>Choose which calendars count</h3>
+      <p>
+        Tap <strong>Calendars BAI reads</strong>. Every calendar on your phone is
+        listed, grouped by the account it came from.
+      </p>
+      <p>
+        Switch off the ones that are somebody else's — a shared team calendar, a
+        subscribed holiday feed — and their events stop filling your day.
+      </p>
+      <p class="why">
+        This matters more than it looks. A shared calendar you cannot control will
+        otherwise make every week read as full.
+      </p>
+    </div>
+    <figure>
+      <img src="img/controls-calendars-picker.png" alt="Calendars screen with Work and Personal both on, reading all two calendars">
+      <figcaption>Pick what counts</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="schedule">
+  <p class="eyebrow">Step 2</p>
+  <h2>Schedule — what your day actually holds</h2>
+  <p>
+    With a calendar connected, the Schedule screen turns your calendar into a single
+    reading: how much of today is already spoken for.
+  </p>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">1</span>Read today's ring</h3>
+      <p>
+        Tap <strong>Schedule</strong> from the dashboard. The ring is the share of your
+        day already booked, and the word beside it is the verdict —
+        <em>Wide open</em>, <em>Still open</em>, <em>Balanced</em>,
+        <em>Filling up</em> or <em>Overloaded</em>.
+      </p>
+      <p>Underneath it: hours booked, and how many events that is.</p>
+      <div class="callout">
+        The percentage is measured against <strong>eight focus hours</strong>, not the
+        twenty-four on the clock — the point is how much attention the day has left,
+        not how much time exists.
+      </div>
+    </div>
+    <figure>
+      <img src="img/schedule-today.png" alt="Schedule screen showing a 56 percent ring, Balanced, 4.5 hours booked across 3 events">
+      <figcaption>Schedule · today</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">2</span>Scan the week, then the day</h3>
+      <p>
+        The strip under the ring is your week. The coloured dot beneath each date is
+        that day's verdict, so you can see a heavy Thursday coming before you agree to
+        anything else. Tap any date to read it.
+      </p>
+      <p>
+        Below that, every event on the chosen day, with its share of your capacity.
+        Finished ones are struck through.
+      </p>
+    </div>
+    <figure>
+      <img src="img/schedule-events.png" alt="Schedule screen listing today's events with the share of capacity each one spent">
+      <figcaption>Schedule · the day's events</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">3</span>Step back to the month</h3>
+      <p>
+        Tap <strong>Month view</strong> for the whole month at once, each day tinted by
+        how full it is. The key at the bottom explains the colours.
+      </p>
+      <p class="why">
+        Useful when someone asks for a date three weeks out and you want to know what
+        that week already looks like.
+      </p>
+    </div>
+    <figure>
+      <img src="img/schedule-month.png" alt="Schedule month view with each day tinted by how full it is">
+      <figcaption>Schedule · month view</figcaption>
+    </figure>
+  </div>
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">4</span>Check a date before you say yes</h3>
+      <p>
+        The <strong>calendar button in the top-right corner</strong> answers a different
+        question from the rest of the screen: not "how is today going?" but
+        <em>"am I free then?"</em>
+      </p>
+      <p>
+        Tap it and pick a date. Tap a <strong>second</strong> date to make it a range —
+        a conference week, a fortnight you are thinking of taking on. Tapping again
+        starts over, so there is nothing to undo. Then tap
+        <strong>See availability</strong>.
+      </p>
+      <p>
+        BAI answers in a sentence — <em>You're open</em>, <em>There is room</em>,
+        <em>You're nearly full</em>, <em>You're full</em>, or
+        <em>Some days are full</em> when the average looks fine but individual days
+        do not — with the figures underneath it.
+      </p>
+      <div class="callout">
+        <strong>It looks further ahead than this screen does.</strong> The week strip
+        holds a limited window; this reads your calendar fresh for whatever dates you
+        asked about, so a month out is answered as reliably as tomorrow.
+      </div>
+      <p class="why">
+        This is the one to reach for when somebody asks you to commit to a date, which
+        is exactly when the diary is hardest to hold in your head.
+      </p>
+    </div>
+    <figure>
+      <img src="img/schedule-availability.png" alt="The Schedule screen with the calendar button in the top-right corner highlighted">
+      <figcaption>Schedule · check a future date</figcaption>
+    </figure>
+  </div>
+
+</section>
+
+<section id="status">
+  <p class="eyebrow">Step 3</p>
+  <h2>Status — how reachable you are</h2>
+  <p>
+    Your current status is the boundary negotiation practice you must follow 
+    in the moment/time/period. Tap on the arc to see more details. Most of 
+    the time the schedule sets it for you; but you can also control this manuuly 
+    or via your mood.
+  </p>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">1</span>Set it yourself</h3>
+      <p>
+        Tap <strong>Status</strong> on the dashboard and choose one of five:
+      </p>
+      <ul>
+        <li><strong>Available</strong> — room to spare, easy to reach.</li>
+        <li><strong>Busy</strong> — engaged, but reachable if it matters.</li>
+        <li><strong>Heads-down</strong> — fully committed, limit interruptions.</li>
+        <li><strong>Stretched</strong> — carrying more than comfortably fits.</li>
+        <li><strong>Unavailable</strong> — switched off, be unreachable.</li>
+      </ul>
+      <p>Tap <strong>Continue</strong> to confirm.</p>
+      <div class="callout">
+        BAI may also move your status by itself — when a meeting starts, or when the
+        day is booked past what it holds. Setting one by hand takes precedence.
+      </div>
+    </div>
+    <figure>
+      <img src="img/status-choose.png" alt="The status screen listing Available, Busy, Heads-down, Stretched and Unavailable">
+      <figcaption>Status · choosing one</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="mood">
+  <p class="eyebrow">Step 4</p>
+  <h2>Mood — how do you feel?</h2>
+  <p>
+    Status is what your calendar says. Mood is what you say. The gap between the two is
+    what the study is looking at, so this is the one thing worth doing daily.
+  </p>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">1</span>Check in</h3>
+      <p>
+        Tap <strong>the face in the top-right corner</strong> of the dashboard. Pick the
+        point on the scale that fits, from <em>Energized</em> at the top to
+        <em>Burned out</em> at the bottom, then tap <strong>Set Mood</strong>.
+      </p>
+      <p>
+        The line under the scale describes whichever one you have picked, so you can
+        check it means what you think.
+      </p>
+
+      <h3 style="margin-top:22px"><span class="num">2</span>Add a word of your own</h3>
+      <p>
+        If none of the ten fits, tap <strong>Add your own</strong> at the foot of the
+        scale. Name it, write one short line describing it, and place it on the scale —
+        1 is your most available, 10 your least. It joins the list and stays there.
+      </p>
+      <div class="callout">
+        BAI may offer to match your status to how you feel. Accepting is optional; the
+        check-in is recorded either way.
+      </div>
+    </div>
+    <figure>
+      <img src="img/mood-scale.png" alt="The mood sheet with the scale running from Energized down through Open, Engaged, Occupied, Focused and Guarded, and an Add your own button beneath">
+      <figcaption>Mood · the scale, and Add your own</figcaption>
+    </figure>
+  </div>
+
+</section>
+
+<section id="insights">
+  <p class="eyebrow">Step 5</p>
+  <h2>Insights — what the weeks add up to</h2>
+  <p>
+    Insights is the only screen that looks backwards. It needs a few days of use before
+    it says anything; until then it tells you so rather than guessing.
+  </p>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">1</span>Your week at a glance</h3>
+      <p>
+        Tap <strong>Insights</strong> from the dashboard. The first panel is a bar a day:
+        taller means more guarded. The dots along it are your mood check-ins, so you can
+        see the two move together — or not.
+      </p>
+    </div>
+    <figure>
+      <img src="img/insights-week.png" alt="Insights showing a bar per day with mood dots plotted across the week">
+      <figcaption>Insights · your week</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">2</span>Where your time went, and how you felt</h3>
+      <p>
+        <strong>Where your time went</strong> splits your logged hours by status, so you
+        can see how much of the week you spent holding people off.
+      </p>
+      <p>
+        <strong>How you've felt</strong> averages your check-ins, and splits them by mode
+        — here, Life is reading heavier than Work, which is exactly the kind of thing
+        worth noticing.
+      </p>
+    </div>
+    <figure>
+      <img src="img/insights-time.png" alt="Insights panels showing time split by status and the average mood for the week">
+      <figcaption>Insights · time and feeling</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">3</span>Work hours, kept or crossed</h3>
+      <p>
+        <strong>Work hours</strong> compares the time you actually spent in Work mode
+        against the hours you told BAI you work — and how much of it landed outside
+        them.
+      </p>
+      <p class="why">
+        This is the boundary, measured. Hours outside your own window are the number to
+        watch.
+      </p>
+    </div>
+    <figure>
+      <img src="img/insights-hours.png" alt="Insights showing hours inside and outside declared working hours">
+      <figcaption>Insights · work hours</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">4</span>The shape of your day</h3>
+      <p>
+        A bar per day showing when work opened and closed. Underneath it, your shortest
+        rest between working days and your longest unbroken break.
+      </p>
+    </div>
+    <figure>
+      <img src="img/insights-shape.png" alt="Insights showing when work opened and closed on each day of the week">
+      <figcaption>Insights · the shape of your day</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">5</span>What stands out</h3>
+      <p>
+        The last panel is written in sentences: patterns BAI has noticed across the
+        period, such as work touching every working day, or less room as the week goes on.
+      </p>
+      <p class="why">
+        These are observations, not instructions. They are there to be recognised or
+        dismissed.
+      </p>
+    </div>
+    <figure>
+      <img src="img/insights-standout.png" alt="Insights showing written observations about the period">
+      <figcaption>Insights · what stands out</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="daily">
+  <p class="eyebrow">In short</p>
+  <h2>What a normal day looks like</h2>
+  <div class="step">
+    <div class="step-body">
+      <p>Once it is set up, BAI asks very little of you:</p>
+      <ul>
+        <li><strong>Check in once a day</strong> — tap the face, pick how you feel.</li>
+        <li><strong>Glance at the dashboard</strong> before agreeing to something new.</li>
+        <li><strong>Correct your status</strong> when the automatic one is wrong.</li>
+        <li><strong>Look at Insights weekly</strong>, not daily. It is about patterns.</li>
+      </ul>
+      <div class="callout">
+        <strong>Nothing leaves your phone.</strong> Your calendar, your places and your
+        check-ins stay on the device.
+      </div>
+    </div>
+    <figure>
+      <img src="img/dashboard.png" alt="The BAI dashboard">
+      <figcaption>Back where you started</figcaption>
+    </figure>
+  </div>
+</section>
+
+<footer>
+  <p>BAI — workload visualization for boundary awareness.</p>
+</footer>
+
+</div>
+</body>
+</html>

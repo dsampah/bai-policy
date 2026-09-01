@@ -6,6 +6,8 @@ BAI is a research application used by enrolled participants of a study assessed
 by **Sikt — the Norwegian Agency for Shared Services in Education and Research**
 (reference **196375**).
 
+**[→ Go to the tutorial guide](tutorial/)**
+
 ---
 
 ## The research
