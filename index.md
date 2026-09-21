@@ -1,6 +1,6 @@
 # BAI — Privacy Policy
 
-**Last updated:** 20 August 2026
+**Last updated:** 21 September 2026
 
 BAI is a research application used by enrolled participants of a study assessed
 by **Sikt — the Norwegian Agency for Shared Services in Education and Research**
@@ -99,7 +99,7 @@ stored on your phone so you do not have to sign in again.
 Your phone number is how the study recognises you as an enrolled participant.
 It is not published, and it is not shared with anyone outside the study team.
 
-Nothing else is transmitted — not once, not in the background, not in summary
+BAI transmits nothing else — not once, not in the background, not in summary
 form.
 
 ---
@@ -114,13 +114,29 @@ All of the following is read and stored locally, and is never sent anywhere:
 - **Calendar events** — read from the calendar on your phone to work out how
   full a day is. BAI reads titles and times to measure load; it does not copy,
   store off-device, or transmit your calendar
+- **Your work hours** — the schedule you set, and the times BAI switched you
+  between Work and Life
+- **Events and calendars you set aside** — if you choose *Don't count this
+  event*, or leave a calendar out, BAI remembers that choice on the phone
 - **Places** — the locations you mark for Work or Life, held as coordinates
 - **Your location** — read from the operating system to work out whether you
   have arrived at a place you marked. Readings are used in the moment and are not uploaded
+- **Your Focus or Do Not Disturb setting** — used only if you choose to let it
+  switch Work and Life. On an iPhone, BAI learns only the Work or Life you
+  yourself attached to a Focus in iOS Settings, never which Focus it is. On
+  Android, BAI reads only whether Do Not Disturb is on, and can turn it on or
+  off when you press BAI's button; it never sees who or what is let through
 
-If you have marked a place, BAI compares your current position to it entirely
-on the device. No map service, geocoder, or location provider outside Apple's
-own operating system is contacted.
+If you have marked a place, BAI compares your position to it on the phone, and
+no map service or geocoder is used. Where that comparison happens depends on the
+phone. On an iPhone it is done by iOS itself. On Android it is done by Google
+Play services' location and geofencing, which are part of the phone's own system
+software and are governed by Google's privacy policy. In both cases BAI itself
+sends your location nowhere.
+
+On Android, BAI's data is also excluded from Google's cloud backup and from
+phone-to-phone transfer, so it is not copied to a Google account or to a new
+phone.
 
 ---
 
@@ -129,8 +145,13 @@ own operating system is contacted.
 | Permission | Why |
 |---|---|
 | **Location** | To switch modes when you reach a place you marked |
+| **Location, "all the time"** | To notice that you have arrived at a place you marked while BAI is closed. Without it, arrival is noticed only when you open BAI |
 | **Calendar** | To measure how booked a day is |
-| **Notifications** | To alert you when a day is booked past what it holds |
+| **Notifications** | To tell you when a day is booked past what it holds, when your work hours start or end, when you arrive at a place you marked, and to remind you occasionally to finish a setting |
+| **Focus (iPhone)** | Nothing to grant. You add BAI to a Focus in iOS Settings, so that turning that Focus on or off switches Work and Life |
+| **Do Not Disturb access (Android)** | To read whether Do Not Disturb is on, and to turn it on or off when you press BAI's button, so that it can switch Work and Life |
+| **Alarms & reminders (Android)** | To deliver your work-hours alerts on the minute when the screen is off |
+| **Run at start-up (Android)** | To set your alerts again after the phone restarts |
 
 Every one of these can be refused, and BAI continues to work without them —
 with the corresponding feature switched off.
@@ -140,7 +161,9 @@ with the corresponding feature switched off.
 ## Deleting your data
 
 Deleting the app from your phone removes everything BAI has stored: your
-history, your mood record, your places, and your signed-in session.
+history, your mood record, your places, and your signed-in session. On Android
+you can also clear BAI's storage in the phone's settings, which does the same
+without removing the app.
 
 Your entry on the participant roster is held by the study team. Taking part in
 the study is voluntary, on the same terms as the consent you gave when you
