@@ -49,7 +49,7 @@
   }
   .step-body h3 .num{
     display:inline-flex;align-items:center;justify-content:center;
-    width:26px;height:26px;border-radius:50%;background:var(--accent);color:#fff;
+    min-width:26px;height:26px;padding:0 4px;border-radius:13px;background:var(--accent);color:#fff;
     font-size:.82rem;margin-right:10px;vertical-align:2px;
   }
   .step-body p{margin:0 0 10px;max-width:56ch}
@@ -83,6 +83,24 @@
   }
   .callout strong{color:var(--ink)}
   .why{color:var(--muted);font-style:italic}
+  .new{
+    display:inline-block;background:var(--accent);color:#fff;border-radius:999px;
+    padding:2px 9px;font-size:.66rem;font-weight:700;letter-spacing:.1em;
+    text-transform:uppercase;margin-left:8px;vertical-align:2px;
+  }
+  .shot-missing{
+    display:flex;align-items:center;justify-content:center;text-align:center;
+    aspect-ratio:9/16;border:2px dashed var(--line);border-radius:var(--radius);
+    background:var(--card);color:var(--muted);font-size:.82rem;padding:18px;
+  }
+  .whatsnew{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:20px 24px;margin:26px 0 0;max-width:72ch;
+  }
+  .whatsnew h3{margin:0 0 8px;color:var(--ink);font-size:1.02rem}
+  .whatsnew ul{margin:8px 0 0;padding-left:20px}
+  .whatsnew li{margin:6px 0}
+  .whatsnew a{color:var(--accent);font-weight:600}
   footer{padding:44px 0 0;color:var(--muted);font-size:.88rem}
   @media (max-width:760px){
     .step{grid-template-columns:1fr;gap:20px}
@@ -101,7 +119,8 @@
     It can support you in communicating and negotiating these boundaries with others, 
     including how and when you are reachable. This guide takes you through the app step by step, 
     from initial setup to everyday use: <strong>Controls</strong>, then <strong>Schedule</strong>,
-    <strong>Status</strong>, <strong>Mood</strong>, and finally <strong>Insights</strong>.
+    <strong>Status</strong>, <strong>Alerts</strong>, <strong>Mood</strong>, and finally
+    <strong>Insights</strong>.
   </p>
   <p class="lede">
     Each step below has the screen you should be looking at. Follow it in order the
@@ -113,13 +132,32 @@
     emptier for the first few days — that is expected, and Insights says so until it
     has enough to go on.
   </div>
+  <div class="whatsnew">
+    <h3>What is new in version 1.1.1</h3>
+    <ul>
+      <li><strong>Several work blocks in a day</strong> — for split shifts and long days
+          (<a href="#controls">Controls</a>).</li>
+      <li><strong>By Focus</strong> on iPhone and <strong>By Do Not Disturb</strong> on
+          Android, as a way to switch between Work and Life
+          (<a href="#controls">Controls</a>).</li>
+      <li><strong>Don't count this event</strong> — set aside private or irrelevant
+          events so they stop filling your day (<a href="#schedule">Schedule</a>).</li>
+      <li><strong>Partly available</strong> — a sixth status for an agreed reduced
+          arrangement (<a href="#status">Status</a>).</li>
+      <li><strong>The capacity alert</strong> — what to do when a day is overloaded, and
+          how the app tells you (<a href="#alerts">Alerts</a>).</li>
+      <li><strong>Plainer Insights</strong> — mood is now described in words rather than
+          numbers (<a href="#insights">Insights</a>).</li>
+    </ul>
+  </div>
   <nav>
     <ol>
       <li><a href="#controls">1 · Controls</a></li>
       <li><a href="#schedule">2 · Schedule</a></li>
       <li><a href="#status">3 · Status</a></li>
-      <li><a href="#mood">4 · Mood</a></li>
-      <li><a href="#insights">5 · Insights</a></li>
+      <li><a href="#alerts">4 · Alerts</a></li>
+      <li><a href="#mood">5 · Mood</a></li>
+      <li><a href="#insights">6 · Insights</a></li>
     </ol>
   </nav>
 </header>
@@ -187,14 +225,17 @@
 
   <div class="step">
     <div class="step-body">
-      <h3><span class="num">2</span>Choose how your hours are decided</h3>
-      <p>Three ways, and you pick one:</p>
+      <h3><span class="num">2</span>Choose how your mode is decided</h3>
+      <p>Pick one — BAI uses one way at a time:</p>
       <ul>
         <li><strong>Fixed hours</strong> — the same window every working day. Tap
             <em>Work hours</em> to set it.</li>
-        <li><strong>Custom hours</strong> — a different window for each day.</li>
+        <li><strong>Custom hours</strong> — each day has its own hours, and can have
+            <em>several work blocks</em>. See the next step.</li>
         <li><strong>By location</strong> — where you are decides. You pin a place that
             means Work and one that means Life.</li>
+        <li><strong>By Focus</strong> (iPhone) or <strong>By Do Not Disturb</strong>
+            (Android) — your phone's own setting decides. See the step after next.</li>
       </ul>
       <div class="callout">
         <strong>If you choose By location</strong> and have not pinned anywhere yet, BAI
@@ -203,8 +244,80 @@
       </div>
     </div>
     <figure>
-      <img src="img/controls-calendar.png" alt="Controls screen showing Fixed hours selected with work hours nine to five, and the Calendar switch on">
-      <figcaption>Controls · hours and calendar</figcaption>
+      <img src="img/controls-schedule-v2.png" alt="Controls screen showing the four ways to decide your mode: Fixed hours, Custom hours, By location and, on Android, By Do Not Disturb (By Focus on iPhone)" onerror="shotMissing(this)">
+      <figcaption>Controls · how your mode is decided (Android shown; iPhone says By Focus)</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">2a</span>Custom hours: several blocks a day <span class="new">New</span></h3>
+      <p>
+        Some days are not one stretch — a morning, then an afternoon, then a shift in
+        the evening. With <strong>Custom hours</strong>, tap a day and use
+        <strong>Add a block</strong> for each one, for example 9:00–11:00, 2:00–7:00 and
+        8:00–11:00 in the evening. Tap <strong>Remove this block</strong> on any you no
+        longer want.
+      </p>
+      <ul>
+        <li>Up to <strong>four blocks</strong> a day, so you are not flooded with alerts.</li>
+        <li>Blocks cannot overlap, and need <strong>at least 15 minutes</strong> between
+            them — the break you meant to take.</li>
+        <li><strong>Copy [day] to other days</strong> saves setting the same day up
+            again.</li>
+        <li>A block can run <strong>past midnight</strong> if the next day is a working
+            day. If it is not, BAI tells you why it will not save; tick the next day
+            first.</li>
+        <li>A fresh install starts with one block, 9:00–5:00.</li>
+      </ul>
+      <p class="why">
+        BAI is in Work mode during every block and in Life mode between them, so a
+        forgotten manual switch does not leave you at work all evening.
+      </p>
+    </div>
+    <figure>
+      <img src="img/controls-custom-blocks.png" alt="The page for one day, listing three work blocks with an Add a block button" onerror="shotMissing(this)">
+      <figcaption>Controls · one day, several blocks</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">2b</span>By Focus and By Do Not Disturb <span class="new">New</span></h3>
+      <p>
+        Instead of hours, let your phone decide: switch on a Focus (or Do Not Disturb)
+        and BAI moves you to Work; switch it off and you are back in Life.
+      </p>
+      <p><strong>On iPhone — By Focus.</strong> Set it up once in iOS Settings:</p>
+      <ul>
+        <li>Open <em>Settings ▸ Focus</em> and choose a Focus (Work, Personal…).</li>
+        <li>Tap <em>Focus Filters ▸ Add Filter ▸ BAI</em>.</li>
+        <li>Choose <em>Work</em>, <em>Life</em> or <em>Keep current mode</em>, then tap
+            <em>Add</em>. Repeat for each Focus you want BAI to follow.</li>
+      </ul>
+      <p>
+        Controls then says <em>Connected. Last heard…</em> the first time it hears one.
+      </p>
+      <div class="keypoint">
+        <span class="flag">Good to know</span>
+        <p>Open BAI when you change Focus.</p>
+        <p>
+          iPhone only tells BAI about a Focus change while the app is open. A change made
+          while BAI is closed is caught up the next time you open it — and your Work and
+          Life time is recorded from then, not from the moment you changed it.
+        </p>
+      </div>
+      <p>
+        <strong>On Android — By Do Not Disturb.</strong> One button turns your phone's
+        Do Not Disturb on or off, and the mode follows: Work while it is on, Life while
+        it is off. The first time, Android sends you to a system page to give BAI
+        <em>Do Not Disturb access</em>. The <em>Count Do Not Disturb</em> switch decides
+        whether being on counts as Work at all.
+      </p>
+    </div>
+    <figure>
+      <img src="img/controls-focus.png" alt="Controls screen with By Focus selected, showing the setup steps and the note to open BAI when you change Focus" onerror="shotMissing(this)">
+      <figcaption>Controls · By Focus</figcaption>
     </figure>
   </div>
 
@@ -351,6 +464,53 @@
     </figure>
   </div>
 
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">5</span>Go back and look <span class="new">New</span></h3>
+      <p>
+        The week strip and the month view both let you go back to earlier days. On a day
+        that has already gone, BAI describes it in the past tense — <em>that day was
+        overloaded</em>, <em>nothing was scheduled</em> — and stops giving advice about
+        it, because there is nothing left to move.
+      </p>
+    </div>
+    <figure>
+      <img src="img/schedule-past-day.png" alt="The Schedule screen on an earlier day, with the banner reading That day was overloaded" onerror="shotMissing(this)">
+      <figcaption>Schedule · an earlier day</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">6</span>Set an event aside: Don't count this event <span class="new">New</span></h3>
+      <p>
+        Not everything in your calendar is work you are carrying — a private
+        appointment, a reminder-style entry, something you are not really attending.
+        <strong>Tap the event</strong> on the Schedule and choose
+        <strong>Don't count this event</strong>. For an event that repeats you can also
+        choose <strong>Don't count any in this series</strong>.
+      </p>
+      <ul>
+        <li>The event <strong>stays on your schedule</strong>, marked <em>Not counted</em>
+            — it is set aside, not deleted.</li>
+        <li>It is left out of your <strong>hours, the ring, overload and your
+            status</strong>, today and in the future, until you count it again.</li>
+        <li>To bring it back, tap it and choose <strong>Count this event again</strong>.</li>
+        <li>It <strong>reacts at once</strong>: the ring, the dashboard figures and your
+            status all follow, as if you had deleted it.</li>
+      </ul>
+      <div class="callout">
+        BAI still tells you when a new event lands on top of one you have set aside — as
+        an overlap only, in words that say it is not counted — because the clash is
+        real even if you are not counting it.
+      </div>
+    </div>
+    <figure>
+      <img src="img/schedule-dont-count.png" alt="The sheet that opens when you tap an event, offering Don't count this event" onerror="shotMissing(this)">
+      <figcaption>Schedule · set an event aside</figcaption>
+    </figure>
+  </div>
+
   <div class="note">
     <h3>What counts against the ring, and what doesn't</h3>
     <p>
@@ -369,9 +529,10 @@
         <em>entries with no hours</em> rather than time booked.
       </li>
       <li>
-        <strong>Only two things take an event out of the figures:</strong> declining it
-        outright, and setting it to <em>Show as: Free</em> in your calendar app. Free is
-        the one signal BAI acts on.
+        <strong>Three things take an event out of the figures:</strong> declining it
+        outright, setting it to <em>Show as: Free</em> in your calendar app, and your own
+        choice to <em>Don't count</em> it (above). Cancelled events are ignored
+        entirely.
       </li>
     </ul>
     <p class="why">
@@ -403,30 +564,188 @@
     <div class="step-body">
       <h3><span class="num">1</span>Set it yourself</h3>
       <p>
-        Tap <strong>Status</strong> on the dashboard and choose one of five:
+        Tap <strong>Status</strong> on the dashboard and choose one of six:
       </p>
       <ul>
         <li><strong>Available</strong> — room to spare, easy to reach.</li>
+        <li><strong>Partly available</strong> — working part of the time, by
+            arrangement. <span class="new">New</span></li>
         <li><strong>Busy</strong> — engaged, but reachable if it matters.</li>
         <li><strong>Heads-down</strong> — fully committed, limit interruptions.</li>
         <li><strong>Stretched</strong> — carrying more than comfortably fits.</li>
         <li><strong>Unavailable</strong> — switched off, be unreachable.</li>
       </ul>
-      <p>Tap <strong>Continue</strong> to confirm.</p>
+      <p>
+        Tap <strong>Continue</strong> to confirm — or slide your finger round the arc at
+        the top; it stops on each status, Partly available included.
+      </p>
       <div class="callout">
         BAI may also move your status by itself — when a meeting starts, or when the
         day is booked past what it holds. Setting one by hand takes precedence.
       </div>
     </div>
     <figure>
-      <img src="img/status-choose.png" alt="The status screen listing Available, Busy, Heads-down, Stretched and Unavailable">
+      <img src="img/status-six.png" alt="The status screen listing Available, Partly available, Busy, Heads-down, Stretched and Unavailable" onerror="shotMissing(this)">
       <figcaption>Status · choosing one</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">2</span>Partly available: an agreed arrangement <span class="new">New</span></h3>
+      <p>
+        For someone working, say, half time, four hours a day, or two days a week — an
+        arrangement agreed with an employer, for health or another reason. It is not
+        about how full your calendar is; it is a standing agreement about how much you
+        are available.
+      </p>
+      <ul>
+        <li>Choose <strong>Partly available</strong>, then tap Continue. The next page
+            asks <strong>Until when?</strong> — pick the <em>last day</em> of the
+            arrangement. Continue stays greyed out until you have picked one.</li>
+        <li>While it runs, <strong>Work mode rests at Partly available</strong> instead
+            of Busy. A meeting still lifts you to Heads-down and back, and a day that is
+            booked past its limit still raises Stretched.</li>
+        <li>It ends by itself after the last day — BAI tells you next time you open the
+            app — or tap <strong>End it now</strong> on the same page.</li>
+        <li>Choose it while you are in <strong>Life</strong> mode and BAI tells you it
+            takes effect the next time you are in Work mode. In Work mode it takes
+            effect at once.</li>
+      </ul>
+      <p class="why">
+        Only you can set it — on the Status page. Your mood never sets it, and neither
+        does an event in your calendar.
+      </p>
+    </div>
+    <figure>
+      <img src="img/status-until-when.png" alt="The Until when page with a month calendar and a date picked" onerror="shotMissing(this)">
+      <figcaption>Status · until when</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">3</span>The two statuses BAI leaves alone <span class="new">New</span></h3>
+      <p>
+        Available, Busy and Heads-down move with your day. <strong>Stretched</strong>
+        and <strong>Unavailable</strong> are different: no meeting or calendar event
+        changes them.
+      </p>
+      <ul>
+        <li><strong>Unavailable</strong> stays until <em>you</em> change it, through
+            midnight and beyond.</li>
+        <li><strong>Stretched</strong> is raised once, by the first event of a day that
+            is booked past what it holds. From then on, a meeting starting, ending or
+            being added does not move it.</li>
+        <li>Change your mind about the load — <strong>set events aside</strong> with
+            <em>Don't count</em>, or delete or shorten them — and if the day is no longer
+            overloaded, the Stretched BAI raised <strong>comes down by itself</strong>
+            to what fits.</li>
+        <li>A Stretched <strong>you chose</strong> — on the Status page or through your
+            mood — stays until you change it, whatever your calendar does.</li>
+        <li>At <strong>midnight</strong>, Stretched resets only if you are in Life mode.
+            In Work mode it is held, and checked again the next midnight, so a late shift
+            is not cut off at twelve.</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/status-stretched.png" alt="The dashboard with the arc on Stretched" onerror="shotMissing(this)">
+      <figcaption>Stretched on the dashboard</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="alerts">
+  <p class="eyebrow">Step 4</p>
+  <h2>Alerts — when a day is too full</h2>
+  <p>
+    BAI tells you three kinds of thing: when it switches your mode, when a day is
+    overloaded, and the occasional reminder that a setting needs a look.
+  </p>
+  <div class="keypoint">
+    <span class="flag">The rule</span>
+    <p>You are told once: on the lock screen if you are away, in the app if you are in it.</p>
+    <p>
+      Never both. If your phone's notifications are switched off, BAI tells you in the app
+      instead. If the Control Centre or a call is laid over the app, BAI still counts you
+      as being in it.
+    </p>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">1</span>Today is overloaded</h3>
+      <p>
+        When a day is booked past what it holds, BAI tells you — by default at 7:00 in the
+        morning, or as soon as a new event pushes today over the line. Tap the alert, or
+        the <strong>See what's driving it</strong> link on the dashboard or the banner on
+        the Schedule, to open the <strong>capacity page</strong>.
+      </p>
+      <ul>
+        <li>The <strong>ring</strong> shows how full the day is.</li>
+        <li><strong>What's driving it</strong> lists the events, biggest first.</li>
+        <li>On a day you can still change, <strong>Ways to ease it</strong> suggests
+            moving or shortening the heaviest block.</li>
+        <li>If your status is not already holding the line, <strong>Set my status to
+            Heads-down</strong> is one tap; otherwise it says why nothing is needed and
+            offers <strong>Got it</strong>.</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/alert-page.png" alt="The capacity alert page showing an overloaded day, its ring, and the events driving it" onerror="shotMissing(this)">
+      <figcaption>Alerts · the capacity page</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">2</span>Set events aside from here <span class="new">New</span></h3>
+      <p>
+        <strong>Tap an event</strong> in the list to stop counting it — the same choice as
+        on the Schedule. The ring moves the moment you do.
+      </p>
+      <ul>
+        <li>Set enough aside and the page changes to <em>Today is now Filling up</em>
+            (or whichever it has become), with a single <strong>Done</strong> button.</li>
+        <li>Your status follows the day: a Stretched BAI raised comes down by itself.
+            One you chose yourself stays.</li>
+        <li>Anything you set aside stays in the list, marked, with <em>Count again</em> on
+            it.</li>
+      </ul>
+      <p>
+        Looking at a day that has already passed? The page reads <em>Wednesday was
+        overloaded</em>, calls the list <em>What drove it</em>, and offers no advice.
+      </p>
+    </div>
+    <figure>
+      <img src="img/alert-eased.png" alt="The capacity page after an event was set aside: the headline reads Today is now Filling up, the event is marked Count again, and a Done button is shown" onerror="shotMissing(this)">
+      <figcaption>Alerts · after setting events aside</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">3</span>Mode switches and reminders</h3>
+      <ul>
+        <li><strong>Work hours starting or ending</strong> — BAI tells you at each block's
+            start and end. On Android, allow <em>Alarms &amp; reminders</em> when BAI asks
+            (once) so these arrive on the minute even with the screen off.</li>
+        <li><strong>Arriving at a pinned place</strong> — a note that BAI has moved you.</li>
+        <li><strong>By Focus</strong> — said in the app when you open BAI, since iPhone
+            cannot tell BAI while it is closed.</li>
+        <li><strong>Reminders</strong> — no places pinned yet, By Focus not set up, or
+            still in Work mode after two days. Usually a setting that needs a look.</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/alert-banner.png" alt="An in-app banner telling the participant BAI switched them to Work mode" onerror="shotMissing(this)">
+      <figcaption>Alerts · in the app</figcaption>
     </figure>
   </div>
 </section>
 
 <section id="mood">
-  <p class="eyebrow">Step 4</p>
+  <p class="eyebrow">Step 5</p>
   <h2>Mood — how do you feel?</h2>
   <p>
     Status is what your calendar says. Mood is what you say. The gap between the two is
@@ -454,7 +773,8 @@
       </p>
       <div class="callout">
         BAI may offer to match your status to how you feel. Accepting is optional; the
-        check-in is recorded either way.
+        check-in is recorded either way. (Partly available is never offered — it is an
+        arrangement, not a mood.)
       </div>
     </div>
     <figure>
@@ -466,7 +786,7 @@
 </section>
 
 <section id="insights">
-  <p class="eyebrow">Step 5</p>
+  <p class="eyebrow">Step 6</p>
   <h2>Insights — what the weeks add up to</h2>
   <p>
     Insights is the only screen that looks backwards. It needs a few days of use before
@@ -496,13 +816,15 @@
         can see how much of the week you spent holding people off.
       </p>
       <p>
-        <strong>How you've felt</strong> averages your check-ins, and splits them by mode
-        — here, Life is reading heavier than Work, which is exactly the kind of thing
-        worth noticing.
+        <strong>How you've felt</strong> sums up your check-ins in words, not numbers:
+        your week's average as a mood — <em>Tired</em>, <em>Focused</em>,
+        <em>Stressed</em> — with a sentence about what that means, and each mode's
+        average as a word too. If Life is reading heavier than Work, it says so, which
+        is exactly the kind of thing worth noticing. <span class="new">New</span>
       </p>
     </div>
     <figure>
-      <img src="img/insights-time.png" alt="Insights panels showing time split by status and the average mood for the week">
+      <img src="img/insights-mood-words.png" alt="Insights panels showing time split by status and the average mood for the week described in words" onerror="shotMissing(this)">
       <figcaption>Insights · time and feeling</figcaption>
     </figure>
   </div>
@@ -557,6 +879,23 @@
       <figcaption>Insights · what stands out</figcaption>
     </figure>
   </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">6</span>Look back at a date</h3>
+      <p>
+        Insights has its own calendar button, the mirror image of the Schedule's: it only
+        lets you pick days that have already happened, and asks <em>how did it go?</em>
+        rather than <em>am I free?</em> Pick a day or a range and tap
+        <strong>See how it went</strong>. BAI answers in the past tense — <em>You were
+        full</em>, <em>There was room</em> — with the figures beneath.
+      </p>
+    </div>
+    <figure>
+      <img src="img/insights-look-back.png" alt="The Insights answer to a past date, reading You were full" onerror="shotMissing(this)">
+      <figcaption>Insights · look back at a date</figcaption>
+    </figure>
+  </div>
 </section>
 
 <section id="daily">
@@ -569,6 +908,11 @@
         <li><strong>Check in once a day</strong> — tap the face, pick how you feel.</li>
         <li><strong>Glance at the dashboard</strong> before agreeing to something new.</li>
         <li><strong>Correct your status</strong> when the automatic one is wrong.</li>
+        <li><strong>Set aside what does not count</strong> — a private event, a
+            reminder-style entry — so your day and your status reflect what you are
+            really carrying.</li>
+        <li><strong>If you use By Focus, open BAI when you change Focus</strong>, so your
+            Work and Life time is recorded on time.</li>
         <li><strong>Look at Insights weekly</strong>, not daily. It is about patterns.</li>
       </ul>
       <div class="callout">
@@ -588,5 +932,17 @@
 </footer>
 
 </div>
+<script>
+  /* A screenshot that has not been added yet shows a labelled placeholder rather than a
+     broken image. Drop the file into img/ under the name in the alt text's <img src>
+     and it appears; nothing else needs to change. */
+  function shotMissing(img){
+    var box=document.createElement('div');
+    box.className='shot-missing';
+    var name=(img.getAttribute('src')||'').split('/').pop();
+    box.textContent='Screenshot to come: '+name;
+    img.replaceWith(box);
+  }
+</script>
 </body>
 </html>
