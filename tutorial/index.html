@@ -101,6 +101,18 @@
   .whatsnew ul{margin:8px 0 0;padding-left:20px}
   .whatsnew li{margin:6px 0}
   .whatsnew a{color:var(--accent);font-weight:600}
+  .pillars{
+    background:var(--card);border:2px solid var(--accent);border-radius:18px;
+    padding:4px 28px 8px;margin:34px 0 10px;box-shadow:0 4px 18px rgba(47,107,96,.14);
+  }
+  .pillars > h2{color:var(--accent)}
+  .pillar-when{
+    display:inline-block;margin-top:12px;padding:7px 14px;border-radius:8px;
+    background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:.86rem;
+    max-width:56ch;
+  }
+  nav a.pillars-link{background:var(--accent);color:#fff}
+  nav a.pillars-link:hover{color:#fff;border-color:var(--accent)}
   footer{padding:44px 0 0;color:var(--muted);font-size:.88rem}
   @media (max-width:760px){
     .step{grid-template-columns:1fr;gap:20px}
@@ -133,6 +145,25 @@
     has enough to go on.
   </div>
   <div class="whatsnew">
+    <h3>What is new in version 1.1.4</h3>
+    <ul>
+      <li><strong>Partly available, at your level</strong> — choose how much you work
+          (20–80%), and BAI measures your days against that; end it early from the
+          Status page; see how it is going in Insights (<a href="#status">Status</a>).</li>
+      <li><strong>New in your calendar</strong> — long events you add are highlighted
+          with plain facts, not judged (<a href="#schedule">Schedule</a>).</li>
+      <li><strong>Alerts open the right page</strong> — tap the 7:00 alert or
+          <em>Now Stretched</em> to see what is driving the day
+          (<a href="#alerts">Alerts</a>).</li>
+      <li><strong>Overloaded days in Insights</strong> — whether you kept Stretched on
+          full days, and whether they felt heavier (<a href="#insights">Insights</a>).</li>
+      <li><strong>Remind me to prepare</strong> — pick an event and get a reminder one to
+          five work days before it (<a href="#schedule">Schedule</a>).</li>
+      <li><strong>Mood reminders on the lock screen</strong> — after five work days
+          without a check-in (two with the calendar off) (<a href="#mood">Mood</a>).</li>
+    </ul>
+  </div>
+  <div class="whatsnew">
     <h3>What is new in version 1.1.1</h3>
     <ul>
       <li><strong>Several work blocks in a day</strong> — for split shifts and long days
@@ -148,10 +179,14 @@
           how the app tells you (<a href="#alerts">Alerts</a>).</li>
       <li><strong>Plainer Insights</strong> — mood is now described in words rather than
           numbers (<a href="#insights">Insights</a>).</li>
+      <li><strong>Switching by hand, with a timer</strong> — with the schedule off,
+          choosing Work asks how long, and switches you back to Life on its own when the
+          time is up (<a href="#controls">Controls</a>).</li>
     </ul>
   </div>
   <nav>
     <ol>
+      <li><a href="#pillars" class="pillars-link">★ Daily use</a></li>
       <li><a href="#controls">1 · Controls</a></li>
       <li><a href="#schedule">2 · Schedule</a></li>
       <li><a href="#status">3 · Status</a></li>
@@ -161,6 +196,89 @@
     </ol>
   </nav>
 </header>
+
+<section id="pillars" class="pillars">
+  <p class="eyebrow">Read this one first</p>
+  <h2>What BAI is actually for, day to day</h2>
+  <p>
+    Everything after this is setup, done once. These four are the ones worth
+    remembering — they are what using BAI looks like most days, once it is running.
+  </p>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">1</span>Tap the arc when you are not sure what to say</h3>
+      <p>
+        The arc on the dashboard is not just a reading. Tap it and BAI opens
+        <strong>What to try</strong> — concrete ways to communicate, reschedule and
+        protect yourself, for the status you are on right now — and
+        <strong>Your move</strong>, the one to act on.
+      </p>
+      <p class="pillar-when">
+        Do this any time you are not sure how to negotiate in the moment.
+      </p>
+    </div>
+    <figure>
+      <img src="img/status-popup.png" alt="The status pop-up for Stretched, showing What to try and Your move: Ease the load" onerror="shotMissing(this)">
+      <figcaption>Tap the arc · negotiation advice for right now</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">2</span>Check in with your mood, then tap the arc</h3>
+      <p>
+        Tap the face and say how you feel. BAI may offer to set your status to match it —
+        accept it, then <strong>tap the arc</strong>. The advice underneath now speaks to
+        how you actually feel, not only to what your calendar shows.
+      </p>
+      <p class="pillar-when">
+        The mood check-in sets the negotiation; the arc tells you how to run it.
+      </p>
+    </div>
+    <figure>
+      <img src="img/status-popup-mood.png" alt="The status pop-up for Stretched reached through a mood check-in, with advice reading Tell someone how you feel and Ease the pressure" onerror="shotMissing(this)">
+      <figcaption>The arc's advice, tailored to how you feel</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">3</span>Check a future date before you agree to it</h3>
+      <p>
+        Before you say yes to something weeks out, look the date up on
+        <strong>Schedule</strong>. Knowing what a week already holds is what tells you
+        what to accept, what to decline, and what to ask to have moved.
+      </p>
+      <p class="pillar-when">
+        This is the negotiation you have with whoever is asking, before you answer them.
+      </p>
+    </div>
+    <figure>
+      <img src="img/schedule-availability.png" alt="The Schedule screen with the calendar button in the top-right corner highlighted">
+      <figcaption>Check a date before you commit to it</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">4</span>Discount what should not count</h3>
+      <p>
+        On a day that is genuinely packed, set aside the events that are not really work
+        you are carrying — <strong>Don't count this event</strong>. That is a negotiation
+        too: with yourself, about what your day actually holds, before you take it to
+        anyone else.
+      </p>
+      <p class="pillar-when">
+        Do this whenever a day reads fuller than it really is.
+      </p>
+    </div>
+    <figure>
+      <img src="img/schedule-dont-count.png" alt="The sheet that opens when you tap an event, offering Don't count this event">
+      <figcaption>Set an event aside — a negotiation with the day itself</figcaption>
+    </figure>
+  </div>
+</section>
 
 <section id="home">
   <p class="eyebrow">Before you start</p>
@@ -225,6 +343,50 @@
 
   <div class="step">
     <div class="step-body">
+      <h3><span class="num">1a</span>Switching by hand, with the schedule off <span class="new">New</span></h3>
+      <p>
+        With the schedule off, tap the <strong>mode chip</strong> on the dashboard and
+        choose Work. Coming from Life mode, BAI asks
+        <strong>How long are you working for?</strong> — pick 1, 2 or 4 hours, the rest
+        of today, or choose a time of your own.
+      </p>
+      <ul>
+        <li>BAI switches you back to <strong>Life on its own</strong> when the time is
+            up — unless you have turned the schedule back on by then, in which case the
+            schedule takes over instead and the timer is dropped.</li>
+        <li><strong>Not sure — I'll switch it myself</strong> skips the timer
+            entirely. Work mode is still set, and it is yours to switch back whenever you
+            like — same as before this existed.</li>
+      </ul>
+      <p class="why">
+        For anyone who manages Work and Life by hand and sometimes forgets to switch
+        back — set a length once, and BAI remembers for you.
+      </p>
+    </div>
+    <figure>
+      <img src="img/work-session-prompt.png" alt="The How long are you working for prompt, with 1 hour, 2 hours, 4 hours, Rest of today and Choose a time" onerror="shotMissing(this)">
+      <figcaption>Controls · how long are you working for?</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">1b</span>Told twice, never both <span class="new">New</span></h3>
+      <p>
+        Choosing a length shows a banner straight away, naming the time you will be
+        switched back. When that moment comes, BAI tells you the same way it tells you
+        about anything else: on the lock screen if you are away, in the app if you are
+        not.
+      </p>
+    </div>
+    <figure>
+      <img src="img/work-session-confirmed.png" alt="An in-app banner reading In Work mode until 12:43pm, with BAI switches you back to Life then" onerror="shotMissing(this)">
+      <figcaption>Confirmed, with the time it ends</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
       <h3><span class="num">2</span>Choose how your mode is decided</h3>
       <p>Pick one — BAI uses one way at a time:</p>
       <ul>
@@ -260,7 +422,8 @@
         longer want.
       </p>
       <ul>
-        <li>Up to <strong>four blocks</strong> a day, so you are not flooded with alerts.</li>
+        <li>Up to <strong>three blocks</strong> a day, so you are not flooded with alerts.
+            (A day you set up earlier with four keeps them.)</li>
         <li>Blocks cannot overlap, and need <strong>at least 15 minutes</strong> between
             them — the break you meant to take.</li>
         <li><strong>Copy [day] to other days</strong> saves setting the same day up
@@ -318,6 +481,53 @@
     <figure>
       <img src="img/controls-focus.png" alt="Controls screen with By Focus selected, showing the setup steps and the note to open BAI when you change Focus" onerror="shotMissing(this)">
       <figcaption>Controls · By Focus</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">2c</span>By location: pin the places <span class="new">New</span></h3>
+      <p>
+        Choose <strong>By location</strong>, then tap <strong>Locations</strong>. Add the
+        place that means Work and the one that means Life — your office, home, wherever
+        the switch should happen.
+      </p>
+      <ul>
+        <li>Tap <strong>Add a location</strong>, name it, and choose
+            <strong>Work</strong> or <strong>Life</strong>.</li>
+        <li>Tap <strong>Locate me</strong>, then <strong>Add place</strong> once it
+            reads <em>Marked here</em>.</li>
+        <li>Pin at least one of each. With only one, BAI can switch you on arrival but
+            has nothing to bring you back.</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/controls-locations.png" alt="The Locations screen listing Office under Work and Home under Life" onerror="shotMissing(this)">
+      <figcaption>Controls · places pinned</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">2d</span>Mark a place standing at it <span class="new">New</span></h3>
+      <div class="keypoint">
+        <span class="flag">Do this on the spot</span>
+        <p>Only add a place while you are standing at it.</p>
+        <p>
+          <strong>Locate me</strong> marks exactly where your phone is at that moment —
+          not an address you type in, and not somewhere you are planning to be. Marking
+          your office from home, or the other way round, pins the wrong spot, and BAI
+          will switch you at the wrong place — or never.
+        </p>
+      </div>
+      <p>
+        BAI confirms with <em>Marked here</em> and how accurate the reading is — a few
+        metres is normal indoors.
+      </p>
+    </div>
+    <figure>
+      <img src="img/controls-add-location.png" alt="The Add a location sheet reading Marked here, plus or minus 5 metres" onerror="shotMissing(this)">
+      <figcaption>Controls · marked while standing there</figcaption>
     </figure>
   </div>
 
@@ -511,6 +721,64 @@
     </figure>
   </div>
 
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">7</span>New in your calendar <span class="new">New</span></h3>
+      <p>
+        When you add a long event — two and a half hours or more — the Schedule shows a
+        strip: <em>1 new event in your calendar</em>. Tap it to see each one
+        <strong>highlighted, not judged</strong>:
+      </p>
+      <ul>
+        <li>when it is and how long it runs;</li>
+        <li>what share of a working day that is — <em>That is half of the 8 hours BAI
+            counts as a working day</em> — and what the day comes to with it;</li>
+        <li>anything it overlaps, and a length the title names if the block differs
+            (<em>The title says 4h</em>).</li>
+      </ul>
+      <p class="why">
+        BAI does not guess what an event is or tell you how long it should take. You
+        know what you booked; this is only so nothing lands unnoticed.
+      </p>
+    </div>
+    <figure>
+      <img src="img/new-in-calendar.png" alt="The New in your calendar page, highlighting a four-hour flight" onerror="shotMissing(this)">
+      <figcaption>Schedule · new in your calendar</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">8</span>Remind me to prepare <span class="new">New</span></h3>
+      <p>
+        For an event you need to get ready for — a presentation, an exam, a hard
+        conversation — <strong>tap it</strong> on the Schedule and choose
+        <strong>Remind me to prepare</strong>. Tick any of <em>1 to 5 work days
+        before</em>; each line shows exactly when it will come.
+      </p>
+      <ul>
+        <li>It comes at the <strong>event's own time</strong> on that work day, kept
+            between 9:00 and 20:00 — <em>Coming up Thursday 14:00: 'Board
+            presentation' — don't forget to prepare.</em></li>
+        <li>Work days are yours, from Controls: one work day before a Monday event is
+            the Friday.</li>
+        <li>Up to <strong>five reminders a week</strong>, for events up to two months
+            ahead. One-off events only, not ones that repeat.</li>
+        <li>The card shows <em>🔔 Prepare (2)</em>. Tap the event again to change or
+            remove them. If the event moves, the reminders move with it; if it is
+            deleted, they go.</li>
+      </ul>
+      <p class="why">
+        If BAI is open when a reminder is due, it tells you in the app instead of on
+        the lock screen.
+      </p>
+    </div>
+    <figure>
+      <img src="img/prep-reminder.png" alt="The Remind me to prepare sheet with work days to tick" onerror="shotMissing(this)">
+      <figcaption>Schedule · remind me to prepare</figcaption>
+    </figure>
+  </div>
+
   <div class="note">
     <h3>What counts against the ring, and what doesn't</h3>
     <p>
@@ -600,14 +868,27 @@
         are available.
       </p>
       <ul>
-        <li>Choose <strong>Partly available</strong>, then tap Continue. The next page
-            asks <strong>Until when?</strong> — pick the <em>last day</em> of the
-            arrangement. Continue stays greyed out until you have picked one.</li>
+        <li>Choose <strong>Partly available</strong>, then tap Continue. On the next
+            page, set <strong>Working at</strong> — how much of a full day you work,
+            from 20% to 80% — and under <strong>Until when?</strong> pick the <em>last
+            day</em> of the arrangement. Continue stays greyed out until you have picked
+            one. The last page repeats both before you tap to set it.
+            <span class="new">New</span></li>
+        <li><strong>Your days are measured at your level.</strong> At 50%, a full day
+            is 4 hours instead of 8, so the ring, the 7:00 alert and Stretched all
+            count against 4 hours on the days the arrangement covers.
+            <span class="new">New</span></li>
         <li>While it runs, <strong>Work mode rests at Partly available</strong> instead
             of Busy. A meeting still lifts you to Heads-down and back, and a day that is
             booked past its limit still raises Stretched.</li>
-        <li>It ends by itself after the last day — BAI tells you next time you open the
-            app — or tap <strong>End it now</strong> on the same page.</li>
+        <li>While it runs, the top of the Status page says so — <em>Partly available
+            (50%) until Mon 12 Oct</em> — with an <strong>End it</strong> button. Ending
+            it keeps today as it is and makes today the last day; tomorrow is back to
+            normal. Otherwise it ends by itself after the last day.
+            <span class="new">New</span></li>
+        <li>Insights shows <strong>Your arrangement</strong> while it runs: what you
+            booked against what you agreed, and how your time and check-ins have gone
+            (<a href="#insights">Insights</a>). <span class="new">New</span></li>
         <li>Choose it while you are in <strong>Life</strong> mode and BAI tells you it
             takes effect the next time you are in Work mode. In Work mode it takes
             effect at once.</li>
@@ -618,7 +899,7 @@
       </p>
     </div>
     <figure>
-      <img src="img/status-until-when.png" alt="The Until when page with a month calendar and a date picked" onerror="shotMissing(this)">
+      <img src="img/status-until-when.png" alt="The Partly available page with the Working at slider and a month calendar with a date picked" onerror="shotMissing(this)">
       <figcaption>Status · until when</figcaption>
     </figure>
   </div>
@@ -677,15 +958,21 @@
       <h3><span class="num">1</span>Today is overloaded</h3>
       <p>
         When a day is booked past what it holds, BAI tells you — by default at 7:00 in the
-        morning, or as soon as a new event pushes today over the line. Tap the alert, or
-        the <strong>See what's driving it</strong> link on the dashboard or the banner on
-        the Schedule, to open the <strong>capacity page</strong>.
+        morning, or as soon as a new event pushes today over the line. Tap the alert (or a
+        <em>Now Stretched</em> alert), or the <strong>See what's driving it</strong> link
+        on the dashboard or the banner on the Schedule, to open the <strong>capacity
+        page</strong>. You are told once per day: if the 7:00 alert has spoken, BAI does
+        not send <em>Now Stretched</em> for the same day as well.
       </p>
       <ul>
         <li>The <strong>ring</strong> shows how full the day is.</li>
         <li><strong>What's driving it</strong> lists the events, biggest first.</li>
         <li>On a day you can still change, <strong>Ways to ease it</strong> suggests
             moving or shortening the heaviest block.</li>
+        <li>On a <strong>Partly available</strong> day, the page measures against the
+            hours you agreed — <em>a day your arrangement sets at 4h (50%)</em> — and
+            asks you to check it stays in line with what you agreed.
+            <span class="new">New</span></li>
         <li>If your status is not already holding the line, <strong>Set my status to
             Heads-down</strong> is one tap; otherwise it says why nothing is needed and
             offers <strong>Got it</strong>.</li>
@@ -735,6 +1022,11 @@
             cannot tell BAI while it is closed.</li>
         <li><strong>Reminders</strong> — no places pinned yet, By Focus not set up, or
             still in Work mode after two days. Usually a setting that needs a look.</li>
+        <li><strong>How available are you?</strong> — after five work days without a mood
+            check-in (two if your calendar is off). Tap it to check in.
+            <span class="new">New</span></li>
+        <li><strong>Coming up … don't forget to prepare</strong> — the reminders you set
+            on an event (<a href="#schedule">Schedule</a>). <span class="new">New</span></li>
       </ul>
     </div>
     <figure>
@@ -764,6 +1056,12 @@
         The line under the scale describes whichever one you have picked, so you can
         check it means what you think.
       </p>
+      <p>
+        Gone quiet? After <strong>five work days</strong> without a check-in — two if
+        your calendar is off — BAI reminds you once on the lock screen, then in the
+        app each day until you check in. It never asks on a day off, or while your
+        schedule is off. <span class="new">New</span>
+      </p>
 
       <h3 style="margin-top:22px"><span class="num">2</span>Add a word of your own</h3>
       <p>
@@ -780,6 +1078,27 @@
     <figure>
       <img src="img/mood-scale.png" alt="The mood sheet with the scale running from Energized down through Open, Engaged, Occupied, Focused and Guarded, and an Add your own button beneath">
       <figcaption>Mood · the scale, and Add your own</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">3</span>When BAI offers to match your status</h3>
+      <p>
+        A mood that pulls away from your current status brings up a second sheet — here,
+        <em>Stressed</em> against a status of only <em>Busy</em> — naming what it would
+        change your status to and why. <strong>Set to …</strong> accepts it;
+        <strong>Keep my status</strong> leaves it as it is. Either way, the mood itself is
+        recorded.
+      </p>
+      <p class="why">
+        Accept it and tap the arc on the dashboard: the negotiation advice you get now
+        speaks to how you actually feel — see <a href="#pillars">Daily use, step 2</a>.
+      </p>
+    </div>
+    <figure>
+      <img src="img/mood-status-match.png" alt="BAI offering to set status to Stretched after a Stressed mood check-in" onerror="shotMissing(this)">
+      <figcaption>Mood pulling away from status — the offer to match it</figcaption>
     </figure>
   </div>
 
@@ -869,6 +1188,12 @@
         The last panel is written in sentences: patterns BAI has noticed across the
         period, such as work touching every working day, or less room as the week goes on.
       </p>
+      <p>
+        Once there have been three overloaded days in four weeks, it also says what
+        happened on them — whether you kept <em>Stretched</em> or changed it, by hand or
+        after a check-in — and whether those days felt heavier than the rest.
+        <span class="new">New</span>
+      </p>
       <p class="why">
         These are observations, not instructions. They are there to be recognised or
         dismissed.
@@ -894,6 +1219,32 @@
     <figure>
       <img src="img/insights-look-back.png" alt="The Insights answer to a past date, reading You were full" onerror="shotMissing(this)">
       <figcaption>Insights · look back at a date</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">7</span>Your arrangement <span class="new">New</span></h3>
+      <p>
+        While <a href="#status">Partly available</a> runs, the first panel is
+        <strong>Your arrangement</strong>: the hours you booked against the hours you
+        agreed, with a bar that turns orange past them.
+      </p>
+      <ul>
+        <li><em>You booked 5.1h a day on average against an agreed 4h</em>, and how many
+            days went past it (the last two weeks, for a longer arrangement).</li>
+        <li>How much of your time your status sat at Partly available, and what lifted
+            it.</li>
+        <li>Whether your check-ins have been lighter or heavier than in the two weeks
+            before it began.</li>
+      </ul>
+      <p class="why">
+        It shows in Work and Life while the arrangement runs, and goes when it ends.
+      </p>
+    </div>
+    <figure>
+      <img src="img/insights-arrangement.png" alt="The Your arrangement panel in Insights" onerror="shotMissing(this)">
+      <figcaption>Insights · your arrangement</figcaption>
     </figure>
   </div>
 </section>
