@@ -77,6 +77,10 @@ never uploaded**.
 The single exception is signing in: your phone number and PIN are sent to the
 study's server to check that you are on the participant roster.
 
+If you connect a calendar by its link, BAI downloads that calendar from the
+address in the link straight to your phone. Nothing about you is sent to the
+study.
+
 BAI contains no advertising, no analytics, and no third-party tracking of any
 kind.
 
@@ -101,8 +105,18 @@ stored on your phone so you do not have to sign in again.
 Your phone number is how the study recognises you as an enrolled participant.
 It is not published, and it is not shared with anyone outside the study team.
 
-BAI transmits nothing else — not once, not in the background, not in summary
-form.
+**Downloading a calendar you connect.** If you add a calendar by its link
+(Controls → Calendar → Connected calendars), BAI fetches the calendar file from
+the address in that link — Outlook, Google, iCloud, Proton or whichever service
+you copied it from — over an encrypted connection, and refreshes it from time
+to time. The request goes only to that service, and carries nothing beyond what
+any web request does, such as your phone's internet address. The calendar comes
+to your phone; nothing goes to the study's server or to anyone else. Some
+services let you share busy times only, without event titles; BAI works with
+that too.
+
+Apart from that, BAI transmits nothing else — not once, not in the background,
+not in summary form.
 
 ---
 
@@ -122,6 +136,13 @@ All of the following is read and stored locally, and is never sent anywhere:
   between Work and Life
 - **Events and calendars you set aside** — if you choose *Don't count this
   event*, or leave a calendar out, BAI remembers that choice on the phone
+- **Calendars you connect by link** — the name and colour you gave each, the
+  downloaded copy of the calendar, and the link itself. The link lets anyone
+  who holds it read that calendar, so BAI keeps it in the phone's secure
+  storage (the iPhone's Keychain, Android's Keystore). Connected calendars stay
+  inside BAI: they are not added to your phone's Calendar app, and other apps
+  cannot see them. You can reset the link in your calendar service at any time,
+  which disconnects it
 - **Reminders to prepare** — if you ask BAI to remind you to prepare for an
   event, it keeps that event's title and start time on the phone, so that it
   can say which event the reminder is for
@@ -153,7 +174,7 @@ phone.
 |---|---|
 | **Location** | To switch modes when you reach a place you marked |
 | **Location, "all the time"** | To notice that you have arrived at a place you marked while BAI is closed. Without it, arrival is noticed only when you open BAI |
-| **Calendar** | To measure how booked a day is |
+| **Calendar** | To measure how booked a day is, from the calendars on your phone. Only asked for if you choose *Calendars on this phone*; calendars you connect by link need no permission |
 | **Notifications** | To tell you when a day is booked past what it holds, when your work hours start or end, when you arrive at a place you marked, and when a Work session you timed is over; to deliver the reminders you ask for, such as a reminder to prepare for an event; and to remind you occasionally to check in with your mood, that you are still in Work mode, or to finish a setting |
 | **Focus (iPhone)** | Nothing to grant. You add BAI to a Focus in iOS Settings, so that turning that Focus on or off switches Work and Life |
 | **Do Not Disturb access (Android)** | To read whether Do Not Disturb is on, and to turn it on or off when you press BAI's button, so that it can switch Work and Life |

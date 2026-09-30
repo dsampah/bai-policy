@@ -514,32 +514,47 @@
 
   <div class="step">
     <div class="step-body">
-      <h3><span class="num">3</span>Connect your calendar</h3>
+      <h3><span class="num">3</span>Turn the calendar on <span class="new">New</span></h3>
       <p>
         Scroll to <strong>What BAI reads</strong> and switch <strong>Calendar</strong>
-        on. Your phone will ask permission the first time.
+        on. Two ways to give BAI a calendar appear beneath it — use either, or both:
       </p>
+      <ul>
+        <li><strong>Calendars on this phone</strong> — the calendars already in your
+            phone's Calendar app.</li>
+        <li><strong>Connected calendars</strong> — a calendar added by its link, for
+            one that is not on your phone, or when you would rather BAI did not have
+            all of your phone's calendars.</li>
+      </ul>
       <p>
-        BAI only ever <em>reads</em> your calendar. It never adds, edits or deletes
+        BAI only ever <em>reads</em> your calendars. It never adds, edits or deletes
         anything.
+      </p>
+      <p class="why">
+        With the switch off, the Schedule and the dashboard say
+        <em>Calendar is off</em>. With it on but no calendar chosen yet, they say
+        <em>No calendar connected</em>. Either one takes you straight here.
       </p>
     </div>
     <figure>
-      <img src="img/controls-calendar.png" alt="Controls screen with the Calendar switch on under What BAI reads">
+      <img src="img/controls-calendar.png" alt="Controls screen with the Calendar switch on, and beneath it Calendars on this phone and Connected calendars" onerror="shotMissing(this)">
       <figcaption>Controls · what BAI reads</figcaption>
     </figure>
   </div>
 
   <div class="step">
     <div class="step-body">
-      <h3><span class="num">4</span>Choose which calendars count</h3>
+      <h3><span class="num">4</span>Calendars on this phone</h3>
       <p>
-        Tap <strong>Calendars BAI reads</strong>. Every calendar on your phone is
-        listed, grouped by the account it came from.
+        Tap <strong>Calendars on this phone</strong>. The first time, your phone asks
+        whether BAI may read its calendars — this is the only place it asks.
       </p>
       <p>
+        Every calendar on your phone is listed, grouped by the account it came from.
         Switch off the ones that are somebody else's — a shared team calendar, a
-        subscribed holiday feed — and their events stop filling your day.
+        subscribed holiday feed — and their events stop filling your day. To leave
+        the phone's calendars out altogether, turn off
+        <strong>Read this phone's calendars</strong> at the top.
       </p>
       <p class="why">
         This matters more than it looks. A shared calendar you cannot control will
@@ -547,8 +562,48 @@
       </p>
     </div>
     <figure>
-      <img src="img/controls-calendars-picker.png" alt="Calendars screen with Work and Personal both on, reading all two calendars">
+      <img src="img/controls-calendars-picker.png" alt="Calendars on this phone, with Read this phone's calendars on and the Work and Personal calendars both switched on" onerror="shotMissing(this)">
       <figcaption>Pick what counts</figcaption>
+    </figure>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <h3><span class="num">5</span>Connect a calendar by its link <span class="new">New</span></h3>
+      <p>
+        For a calendar that is not on your phone — or one you would rather keep off
+        it — tap <strong>Connected calendars</strong>, then <strong>+</strong>.
+        Choose where it lives: Outlook, Google, iCloud, Proton, Fastmail, Zoho,
+        Nextcloud, or <em>Other</em> for anything else.
+      </p>
+      <ul>
+        <li>BAI shows where that service keeps the calendar's link. Copy it, paste it
+            under <strong>Link</strong>, give the calendar a name and a colour, and tap
+            <strong>Connect</strong>.</li>
+        <li>Where the service offers it, you can share <em>busy times only</em>. BAI
+            still counts the hours; the events show as "Busy".</li>
+        <li>Each calendar shows when it was last updated. BAI updates it by itself;
+            the <strong>refresh</strong> button updates it now. Tap a calendar to
+            remove it.</li>
+        <li>On the Schedule, every event carries a small dot in its calendar's colour,
+            so you can tell where it came from. The same event in two calendars is
+            shown and counted once, with both dots.</li>
+      </ul>
+      <p class="why">
+        The link goes straight from your calendar service to your phone, and stays in
+        BAI — it is not added to your phone's Calendar app, and nothing is sent to the
+        study. Anyone holding the link can read that calendar, so keep it to
+        yourself; resetting it in your calendar service disconnects it. For a work
+        calendar, check that your workplace allows sharing it this way.
+      </p>
+    </div>
+    <figure>
+      <img src="img/connected-add.png" alt="Adding a Proton calendar: the link pasted, named Holidays, a violet colour chosen, and the Connect button" onerror="shotMissing(this)">
+      <figcaption>Paste the link, name it, pick a colour</figcaption>
+      <img style="margin-top:18px" src="img/connected-list.png" alt="Connected calendars listing Holidays, from Proton, updated 12:37pm, with a refresh button" onerror="shotMissing(this)">
+      <figcaption>Connected, with when it last updated</figcaption>
+      <img style="margin-top:18px" src="img/schedule-calendar-dots.png" alt="A Schedule day with Norway: Christmas Eve marked with a violet dot and Year-end review with a blue dot" onerror="shotMissing(this)">
+      <figcaption>Each event's dot is its calendar's colour</figcaption>
     </figure>
   </div>
 </section>
@@ -1010,7 +1065,8 @@
         <li><strong>Reminders</strong> — no places pinned yet, By Focus not set up, or
             still in Work mode after two days. Usually a setting that needs a look.</li>
         <li><strong>How available are you?</strong> — after five work days without a mood
-            check-in (two if your calendar is off). Tap it to check in.
+            check-in (two if your calendar is off or none is connected). Tap it to
+            check in.
             <span class="new">New</span></li>
         <li><strong>Coming up … don't forget to prepare</strong> — the reminders you set
             on an event (<a href="#schedule">Schedule</a>). <span class="new">New</span></li>
@@ -1045,7 +1101,7 @@
       </p>
       <p>
         Gone quiet? After <strong>five work days</strong> without a check-in — two if
-        your calendar is off — BAI reminds you once on the lock screen, then in the
+        your calendar is off or none is connected — BAI reminds you once on the lock screen, then in the
         app each day until you check in. It never asks on a day off, or while your
         schedule is off. <span class="new">New</span>
       </p>
