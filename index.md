@@ -136,7 +136,7 @@ All of the following is read and stored locally, and is never sent anywhere:
   between Work and Life
 - **Events and calendars you set aside** — if you choose *Don't count this
   event*, or leave a calendar out, BAI remembers that choice on the phone
-- **Calendars you connect by link** — the name and colour you gave each, the
+- **Calendars you connect by link** — the name you gave each, the
   downloaded copy of the calendar, and the link itself. The link lets anyone
   who holds it read that calendar, so BAI keeps it in the phone's secure
   storage (the iPhone's Keychain, Android's Keystore). Connected calendars stay
