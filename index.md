@@ -1,6 +1,6 @@
 # BAI — Privacy Policy
 
-**Last updated:** 21 September 2026
+**Last updated:** 30 September 2026
 
 BAI is a research application used by enrolled participants of a study assessed
 by **Sikt — the Norwegian Agency for Shared Services in Education and Research**
@@ -49,8 +49,10 @@ Everything it records stays on your phone; see the sections below.
 and transmits nothing but the sign-in check, so your working patterns, calendar
 and location never reach the researcher, the University, or anyone else. What
 remains is ordinary: anyone with your unlocked phone could see what BAI shows,
-and its notifications may appear on your lock screen — both can be limited in
-your phone's settings, and deleting the app removes everything it holds. You may
+and its notifications may appear on your lock screen — a reminder to prepare
+names the event it is for — as may BAI's widget, if you add it to your iPhone's
+lock screen. All of this can be limited in your phone's settings, and deleting
+the app removes everything it holds. You may
 also find it uncomfortable to see your own working patterns set out. The
 interview will ask about your workload and work–life boundaries, which may touch
 on stress or family; you may decline any question, or ask for anything you have
@@ -109,7 +111,9 @@ form.
 All of the following is read and stored locally, and is never sent anywhere:
 
 - **Your mode** — whether you are in Work or Life
-- **Your status** — the availability you broadcast, and its history
+- **Your status** — the availability you broadcast, and its history,
+  including any *Partly available* arrangement: the share of the time you work
+  and the dates it runs
 - **Your mood check-ins** — what you selected, and when
 - **Calendar events** — read from the calendar on your phone to work out how
   full a day is. BAI reads titles and times to measure load; it does not copy,
@@ -118,6 +122,9 @@ All of the following is read and stored locally, and is never sent anywhere:
   between Work and Life
 - **Events and calendars you set aside** — if you choose *Don't count this
   event*, or leave a calendar out, BAI remembers that choice on the phone
+- **Reminders to prepare** — if you ask BAI to remind you to prepare for an
+  event, it keeps that event's title and start time on the phone, so that it
+  can say which event the reminder is for
 - **Places** — the locations you mark for Work or Life, held as coordinates
 - **Your location** — read from the operating system to work out whether you
   have arrived at a place you marked. Readings are used in the moment and are not uploaded
@@ -147,7 +154,7 @@ phone.
 | **Location** | To switch modes when you reach a place you marked |
 | **Location, "all the time"** | To notice that you have arrived at a place you marked while BAI is closed. Without it, arrival is noticed only when you open BAI |
 | **Calendar** | To measure how booked a day is |
-| **Notifications** | To tell you when a day is booked past what it holds, when your work hours start or end, when you arrive at a place you marked, and to remind you occasionally to finish a setting |
+| **Notifications** | To tell you when a day is booked past what it holds, when your work hours start or end, when you arrive at a place you marked, and when a Work session you timed is over; to deliver the reminders you ask for, such as a reminder to prepare for an event; and to remind you occasionally to check in with your mood, that you are still in Work mode, or to finish a setting |
 | **Focus (iPhone)** | Nothing to grant. You add BAI to a Focus in iOS Settings, so that turning that Focus on or off switches Work and Life |
 | **Do Not Disturb access (Android)** | To read whether Do Not Disturb is on, and to turn it on or off when you press BAI's button, so that it can switch Work and Life |
 | **Alarms & reminders (Android)** | To deliver your work-hours alerts on the minute when the screen is off |
