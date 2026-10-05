@@ -137,10 +137,22 @@
   .search-status:empty{display:none}
   .want{
     background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
-    padding:20px 24px 16px;margin:22px 0 0;
+    padding:16px 24px 12px;margin:26px 0 0;
   }
-  .want h2{font-size:1.15rem;margin:0 0 4px}
+  .want summary{
+    font-size:1.15rem;font-weight:700;color:var(--ink);cursor:pointer;
+    list-style:none;display:flex;align-items:center;justify-content:space-between;
+    margin:0 0 4px;
+  }
+  .want summary::-webkit-details-marker{display:none}
+  .want summary::after{content:"Show";font-size:.88rem;font-weight:700;color:var(--accent)}
+  .want[open] summary::after{content:"Hide"}
+  .want[open] summary{margin-bottom:10px}
   .want p{margin:0 0 10px;font-size:.92rem;color:var(--muted)}
+  .want .want-note{
+    background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 8px 8px 0;
+    padding:10px 14px;color:var(--body);
+  }
   .want ul{list-style:none;margin:0;padding:0;columns:3 230px;column-gap:28px}
   .want li{break-inside:avoid;margin:0 0 7px}
   .want a,.toc a{color:var(--accent);text-decoration:none;font-weight:600}
@@ -198,8 +210,8 @@
   </p>
   <p class="lede">
     Each step has the screen you should be looking at. You do not have to read it
-    all: search for a word, pick what you want from the list below, or open one
-    section at a time.
+    all: search for a word, or open one section at a time. Once BAI is set up, the
+    <em>I want to…</em> shortcuts further down take you straight to one thing.
   </p>
   <div class="note">
     The screenshots show a demonstration account with sample calendar entries and a
@@ -231,36 +243,6 @@
 </div>
 <p class="search-status" id="guide-search-status" aria-live="polite"></p>
 
-<!-- The quickest way in: one line per thing people come here for. Each link goes
-     straight to its step. Add a line whenever participants keep asking for something. -->
-<div class="want">
-  <h2>I want to…</h2>
-  <p>Tap one to go straight to it.</p>
-  <ul>
-    <li><a href="#pillars-your-status-is-on-the-dashboard">know what to say right now</a></li>
-    <li><a href="#pillars-tell-bai-how-you-feel">check in with how I feel</a></li>
-    <li><a href="#mood-add-a-word-of-your-own">add a mood of my own</a></li>
-    <li><a href="#schedule-check-a-date-before-you-say">check whether I am free on a date</a></li>
-    <li><a href="#schedule-set-an-event-aside-dont-count">stop an event counting</a></li>
-    <li><a href="#schedule-remind-me-to-prepare">get a reminder to prepare</a></li>
-    <li><a href="#pillars-say-when-you-work-outside-your">say I am working outside my hours</a></li>
-    <li><a href="#schedule-what-counts">find out why my day looks too full</a></li>
-    <li><a href="#alerts-today-is-overloaded">understand an overloaded alert</a></li>
-    <li><a href="#controls-choose-how-your-mode-is-decided">set my working hours</a></li>
-    <li><a href="#controls-custom-hours-several-blocks-a-day">have several work blocks in a day</a></li>
-    <li><a href="#controls-by-location-pin-the-places">switch mode by where I am</a></li>
-    <li><a href="#controls-by-focus-and-by-do-not">switch mode with Focus or Do Not Disturb</a></li>
-    <li><a href="#controls-switching-by-hand-with-the-schedule">switch to Work by hand</a></li>
-    <li><a href="#controls-turn-the-schedule-on">turn BAI off for a holiday</a></li>
-    <li><a href="#controls-calendars-on-this-phone">choose which calendars count</a></li>
-    <li><a href="#controls-connect-a-calendar-by-its-link">connect a calendar by its link</a></li>
-    <li><a href="#status-partly-available-an-agreed-arrangement">set a part-time arrangement</a></li>
-    <li><a href="#status-the-two-statuses-bai-leaves-alone">understand Stretched and Unavailable</a></li>
-    <li><a href="#insights-your-week-at-a-glance">read my week in Insights</a></li>
-    <li><a href="#widget-on-an-iphone">add the widget on an iPhone</a></li>
-    <li><a href="#widget-on-an-android-phone">add the widget on Android</a></li>
-  </ul>
-</div>
 
 <section id="pillars" class="pillars">
   <p class="eyebrow">Read this one first</p>
@@ -404,6 +386,44 @@
     </figure>
   </div>
 </section>
+
+<!-- Shortcuts: one line per thing people come here for, each going straight to
+     its step. Folded until tapped, and placed after "Read this one first" so
+     the everyday steps come before the shortcuts. Add a line whenever
+     participants keep asking for something. -->
+<details class="want">
+  <summary>I want to…</summary>
+  <p class="want-note">
+    <strong>Finish setting up first.</strong> These shortcuts assume your schedule
+    and calendar are already set in <a href="#controls">Controls</a>. If they are
+    not, start there.
+  </p>
+  <p>Tap one to go straight to it.</p>
+  <ul>
+    <li><a href="#pillars-your-status-is-on-the-dashboard">know what to say right now</a></li>
+    <li><a href="#pillars-tell-bai-how-you-feel">check in with how I feel</a></li>
+    <li><a href="#mood-add-a-word-of-your-own">add a mood of my own</a></li>
+    <li><a href="#schedule-check-a-date-before-you-say">check whether I am free on a date</a></li>
+    <li><a href="#schedule-set-an-event-aside-dont-count">stop an event counting</a></li>
+    <li><a href="#schedule-remind-me-to-prepare">get a reminder to prepare</a></li>
+    <li><a href="#pillars-say-when-you-work-outside-your">say I am working outside my hours</a></li>
+    <li><a href="#schedule-what-counts">find out why my day looks too full</a></li>
+    <li><a href="#alerts-today-is-overloaded">understand an overloaded alert</a></li>
+    <li><a href="#controls-choose-how-your-mode-is-decided">set my working hours</a></li>
+    <li><a href="#controls-custom-hours-several-blocks-a-day">have several work blocks in a day</a></li>
+    <li><a href="#controls-by-location-pin-the-places">switch mode by where I am</a></li>
+    <li><a href="#controls-by-focus-and-by-do-not">switch mode with Focus or Do Not Disturb</a></li>
+    <li><a href="#controls-switching-by-hand-with-the-schedule">switch to Work by hand</a></li>
+    <li><a href="#controls-turn-the-schedule-on">turn BAI off for a holiday</a></li>
+    <li><a href="#controls-calendars-on-this-phone">choose which calendars count</a></li>
+    <li><a href="#controls-connect-a-calendar-by-its-link">connect a calendar by its link</a></li>
+    <li><a href="#status-partly-available-an-agreed-arrangement">set a part-time arrangement</a></li>
+    <li><a href="#status-the-two-statuses-bai-leaves-alone">understand Stretched and Unavailable</a></li>
+    <li><a href="#insights-your-week-at-a-glance">read my week in Insights</a></li>
+    <li><a href="#widget-on-an-iphone">add the widget on an iPhone</a></li>
+    <li><a href="#widget-on-an-android-phone">add the widget on Android</a></li>
+  </ul>
+</details>
 
 <section id="home">
   <p class="eyebrow">Before you start</p>
