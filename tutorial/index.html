@@ -104,8 +104,10 @@
     background:var(--accent-soft);color:var(--accent);font-weight:700;font-size:.86rem;
     max-width:56ch;
   }
-  nav a.pillars-link{background:var(--accent);color:#fff}
-  nav a.pillars-link:hover{color:#fff;border-color:var(--accent)}
+  /* The section you are reading is the filled one; Daily use is outlined in
+     the accent so it still stands out when it is not. */
+  nav a.pillars-link{color:var(--accent);border-color:var(--accent)}
+  nav a.active,nav a.active:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
   footer{padding:44px 0 0;color:var(--muted);font-size:.88rem}
 
   /* ── Finding things: the bar that stays put, search, "I want to…", folding ── */
@@ -1727,6 +1729,41 @@
       if(hash.length>1 && goTo(hash,true)) e.preventDefault();
     });
     window.addEventListener('hashchange',function(){ if(location.hash) goTo(location.hash,false); });
+
+    // The button for the section on screen is the filled one, and the row of
+    // buttons slides to keep it in view.
+    var navList=doc.querySelector('.bar nav ol'), bar=doc.querySelector('.bar'),
+        links={}, current=null;
+    [].slice.call(navList.querySelectorAll('a[href^="#"]')).forEach(function(a){
+      links[a.getAttribute('href').slice(1)]=a;
+    });
+    function mark(){
+      var line=bar.getBoundingClientRect().bottom+24, here=null;
+      if(!root.classList.contains('searching')){
+        sections.forEach(function(sec){
+          var r=sec.getBoundingClientRect();
+          if(r.top<=line && r.bottom>line) here=sec.id;
+        });
+      }
+      var a=here && links[here] ? links[here] : null;
+      if(a===current) return;
+      if(current){current.classList.remove('active'); current.removeAttribute('aria-current');}
+      current=a;
+      if(!a) return;
+      a.classList.add('active'); a.setAttribute('aria-current','true');
+      var box=navList.getBoundingClientRect(), r=a.getBoundingClientRect();
+      if(r.left<box.left || r.right>box.right){
+        navList.scrollLeft+=r.left-box.left-(box.width-r.width)/2;
+      }
+    }
+    // Called straight from the scroll: it is ten rectangle reads, cheap enough
+    // not to need deferring.
+    function queueMark(){ mark(); }
+    window.addEventListener('scroll',queueMark,{passive:true});
+    window.addEventListener('resize',queueMark);
+    input.addEventListener('input',queueMark);
+    doc.addEventListener('click',function(){setTimeout(queueMark,60);});
+    queueMark();
 
     // Back to the top.
     var top=doc.createElement('button');
