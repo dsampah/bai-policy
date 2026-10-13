@@ -248,7 +248,7 @@
   <p class="eyebrow">Read this one first</p>
   <h2>What BAI is actually for, day to day</h2>
   <p>
-    Everything after this is setup, done once. These six are the ones worth
+    Everything after this is setup, done once. These seven are the ones worth
     remembering — they are what using BAI looks like most days, once it is running.
   </p>
 
@@ -385,6 +385,29 @@
       <figcaption>Tap the yellow line · set how long</figcaption>
     </figure>
   </div>
+
+  <div class="step" id="pillars-see-what-your-hours-are-made-of">
+    <div class="step-body">
+      <h3><span class="num">7</span>See what your hours are made of <span class="new">New</span></h3>
+      <p>
+        On the dashboard, tap the figures on the bottom card (or the sentence under
+        them, which ends in <em>›</em>). BAI shows the events behind the number: one
+        day in a small window, a week or a month on a page of its own.
+      </p>
+      <p>
+        You can sort the list, and tap an event that has not ended yet to leave it
+        out or set a reminder to prepare.
+      </p>
+      <p class="pillar-when">
+        If the day is overloaded, the same tap opens the capacity page instead.
+        <a href="#home-what-the-hours-are-made-of">More about these views</a>.
+      </p>
+    </div>
+    <figure>
+      <img src="img/stats-day.png" alt="A window over the dashboard listing one day's booked hours and its three events, longest first" onerror="shotMissing(this)">
+      <figcaption>Tap the figures · see the events</figcaption>
+    </figure>
+  </div>
 </section>
 
 <!-- Shortcuts: one line per thing people come here for, each going straight to
@@ -407,6 +430,7 @@
     <li><a href="#schedule-set-an-event-aside-dont-count">stop an event counting</a></li>
     <li><a href="#schedule-remind-me-to-prepare">get a reminder to prepare</a></li>
     <li><a href="#pillars-say-when-you-work-outside-your">say I am working outside my hours</a></li>
+    <li><a href="#pillars-see-what-your-hours-are-made-of">see which events make up my hours</a></li>
     <li><a href="#schedule-what-counts">find out why my day looks too full</a></li>
     <li><a href="#alerts-today-is-overloaded">understand an overloaded alert</a></li>
     <li><a href="#controls-choose-how-your-mode-is-decided">set my working hours</a></li>
@@ -462,6 +486,52 @@
     <figure>
       <img src="img/dashboard.png" alt="The BAI dashboard showing an Available status, four tiles, and today's calendar figures">
       <figcaption>The dashboard</figcaption>
+    </figure>
+  </div>
+
+  <div class="step" id="home-what-the-hours-are-made-of">
+    <div class="step-body">
+      <h3><span class="num">·</span>See what the hours are made of <span class="new">New</span></h3>
+      <p>
+        Tap the figures on the bottom card, or the sentence under them (it ends in
+        <em>›</em>), to see what is behind the number. For <strong>one day</strong> a
+        small window opens over the dashboard.
+      </p>
+      <ul>
+        <li>It shows the hours booked, the share of the day, and that day's events.</li>
+        <li><strong>Longest / Shortest / By time</strong> changes the order of the
+            list.</li>
+        <li>Tap an event that has not ended yet to <strong>leave it out</strong> or set
+            a <strong>reminder to prepare</strong>, as on the Schedule.</li>
+        <li>If the day is <strong>overloaded</strong>, the same tap opens the capacity
+            page instead (<a href="#alerts-today-is-overloaded">Alerts, step 1</a>).</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/stats-day.png" alt="A window over the dashboard listing one day's booked hours and its three events, longest first" onerror="shotMissing(this)">
+      <figcaption>Dashboard · one day's hours</figcaption>
+    </figure>
+  </div>
+
+  <div class="step" id="home-a-week-or-a-month-of-hours">
+    <div class="step-body">
+      <h3><span class="num">·</span>A week or a month of hours <span class="new">New</span></h3>
+      <p>
+        With <strong>Week</strong>, <strong>Month</strong> or days you picked, the same
+        tap opens the <strong>Booked hours</strong> page.
+      </p>
+      <ul>
+        <li><strong>One box per day</strong>, in that day's colour: the deeper the
+            colour, the fuller the day.</li>
+        <li><strong>Tap a box</strong> to see only that day's events; tap it again for
+            all of them.</li>
+        <li>The list sorts and answers to a tap the same way as the day window. A long
+            list shows the first eight, with <strong>Show all</strong> under them.</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/stats-week.png" alt="The Booked hours page for a week, with a coloured box for each day and the week's events listed below" onerror="shotMissing(this)">
+      <figcaption>Dashboard · a week's hours</figcaption>
     </figure>
   </div>
 </section>
@@ -928,7 +998,8 @@
         <li>It <strong>reacts at once</strong>: the ring, the dashboard figures and your
             status all follow, as if you had deleted it.</li>
         <li>This is for <strong>today and the days ahead</strong>. Once a day has
-            passed, its events can no longer be tapped; earlier today still can.</li>
+            passed, its events can no longer be tapped, and neither can an event
+            earlier today once it has ended.</li>
       </ul>
       <div class="callout">
         BAI still tells you when a new event lands on top of one you have set aside — as
@@ -1183,14 +1254,15 @@
       <p>
         When a day is booked past what it holds, BAI tells you — by default at 7:00 in the
         morning, or as soon as a new event pushes today over the line. Tap the alert (or a
-        <em>Now Stretched</em> alert), or the <strong>See what's driving it</strong> link
-        on the dashboard or the banner on the Schedule, to open the <strong>capacity
-        page</strong>. You are told once per day: if the 7:00 alert has spoken, BAI does
+        <em>Now Stretched</em> alert), or the figures on the dashboard's bottom card, or
+        the banner on the Schedule, to open the <strong>capacity page</strong>. You are told once per day: if the 7:00 alert has spoken, BAI does
         not send <em>Now Stretched</em> for the same day as well.
       </p>
       <ul>
         <li>The <strong>ring</strong> shows how full the day is.</li>
-        <li><strong>What's driving it</strong> lists the events, biggest first.</li>
+        <li><strong>What's driving it</strong> lists the events, biggest first. For
+            a week, a month or days you picked, it shows a box per day first, then
+            the events; tap a box to see only that day.</li>
         <li>On a day you can still change, <strong>Ways to ease it</strong> suggests
             moving or shortening the heaviest block.</li>
         <li>On a <strong>Partly available</strong> day, the page measures against the
