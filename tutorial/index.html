@@ -199,7 +199,7 @@
 <header>
   <h1>Using BAI</h1>
   <!-- Change this date whenever the guide is edited. -->
-  <p class="updated">Last updated: 13 October 2026</p>
+  <p class="updated">Last updated: 16 October 2026</p>
   <p class="lede">
     BAI helps you understand your workload and become more aware of your work-life boundaries. 
     It can support you in communicating and negotiating these boundaries with others, 
@@ -248,7 +248,7 @@
   <p class="eyebrow">Read this one first</p>
   <h2>What BAI is actually for, day to day</h2>
   <p>
-    Everything after this is setup, done once. These seven are the ones worth
+    Everything after this is setup, done once. These eight are the ones worth
     remembering — they are what using BAI looks like most days, once it is running.
   </p>
 
@@ -374,6 +374,12 @@
       <p>
         Forgot to say? When something suggests you worked, BAI asks the next day:
         <em>Did you work outside your hours yesterday?</em> Your answer only saves the hours.
+        If you already set the time with the yellow line, it does not ask again.
+      </p>
+      <p>
+        Answer <strong>None</strong> three times in a row for the same weekday and BAI
+        skips that weekday the next week, then asks again. Work you set with the yellow
+        line on any day brings the question back straight away.
       </p>
       <p class="pillar-when">
         The line can be tapped while your schedule is on. With the schedule off, switch
@@ -395,6 +401,11 @@
         day in a small window, a week or a month on a page of its own.
       </p>
       <p>
+        Under the total it says how full the stretch is, in the same words and colour
+        as the dashboard: <em>Today is filling up. A good day to say NO.</em> Leave an
+        event out and it updates there and then.
+      </p>
+      <p>
         You can sort the list, and tap an event that has not ended yet to leave it
         out or set a reminder to prepare.
       </p>
@@ -404,8 +415,44 @@
       </p>
     </div>
     <figure>
-      <img src="img/stats-day.png" alt="A window over the dashboard listing one day's booked hours and its three events, longest first" onerror="shotMissing(this)">
+      <img src="img/stats-day.png" alt="A window over the dashboard showing 5.5 hours booked, 3 events, 69% of the day, the line Today is filling up. A good day to say NO., and the day's events longest first" onerror="shotMissing(this)">
       <figcaption>Tap the figures · see the events</figcaption>
+    </figure>
+  </div>
+
+  <div class="step" id="pillars-starting-late-or-staying-on">
+    <div class="step-body">
+      <h3><span class="num">8</span>Starting late or staying on? <span class="new">New</span></h3>
+      <p>
+        With <strong>Fixed hours</strong> or <strong>Custom hours</strong>, BAI tells you
+        <strong>15 minutes before</strong> work starts and ends:
+        <em>Work starts at 9:00</em>, <em>Work ends at 17:00</em>.
+      </p>
+      <ul>
+        <li>On the lock screen, the notification has three buttons:
+            <strong>+15 min</strong>, <strong>+30 min</strong> and <strong>+1 h</strong>.
+            On an iPhone, <strong>press and hold</strong> the notification to see them;
+            on Android they show straight away. Tapping one opens BAI and moves that
+            start or end.</li>
+        <li>Tap the notification itself and BAI asks <em>Start later today?</em> or
+            <em>Stay longer today?</em> with the same three choices.</li>
+        <li>With BAI open, the same note comes as a banner with a
+            <strong>Later</strong> button.</li>
+      </ul>
+      <p>
+        It is for <strong>that day only</strong>; your schedule is not changed. Starting
+        later keeps you in Life until then. Staying longer keeps you in Work, and that
+        time counts as work. Each start and end gets one heads-up.
+      </p>
+      <p class="pillar-when">
+        To start early, switch to Work with the mode chip, as before.
+        <a href="#alerts-mode-switches-and-reminders">More about these notices</a>.
+      </p>
+    </div>
+    <figure>
+      <img src="img/heads-up-notification.png" alt="A BAI notification reading Work ends at 5:00pm, BAI switches you to Life mode then, with buttons +15 min, +30 min and +1 h" onerror="shotMissing(this)">
+      <img src="img/heads-up-later.png" alt="The Stay longer today? sheet in BAI, with +15 min, +30 min and +1 h, each showing the new end time" onerror="shotMissing(this)">
+      <figcaption>15 minutes before · move it for today</figcaption>
     </figure>
   </div>
 </section>
@@ -431,6 +478,8 @@
     <li><a href="#schedule-remind-me-to-prepare">get a reminder to prepare</a></li>
     <li><a href="#pillars-say-when-you-work-outside-your">say I am working outside my hours</a></li>
     <li><a href="#pillars-see-what-your-hours-are-made-of">see which events make up my hours</a></li>
+    <li><a href="#pillars-starting-late-or-staying-on">start work later or stay on today</a></li>
+    <li><a href="#mood-how-did-yesterday-go">say how yesterday went</a></li>
     <li><a href="#schedule-what-counts">find out why my day looks too full</a></li>
     <li><a href="#alerts-today-is-overloaded">understand an overloaded alert</a></li>
     <li><a href="#controls-choose-how-your-mode-is-decided">set my working hours</a></li>
@@ -456,10 +505,12 @@
     This is what opens when you launch BAI, and where the tour begins and ends.
   </p>
   <p>
-    The first time you open BAI after an update, a short set of cards shows over the
-    dashboard: the everyday things, one per card. The pictures on them are examples
-    only. Tap <strong>Next</strong> to go through them or <strong>Skip</strong> to
-    close; the last card has a button that opens this guide.
+    The first time you open BAI, a short set of cards shows over the dashboard: the
+    everyday things, one per card. After an update you see only the cards you have
+    not seen before, under <em>New since you last looked</em>, and nothing if there
+    are none. The pictures on them are examples only. Tap <strong>Next</strong> to
+    go through them or <strong>Skip</strong> to close; the last card has a button
+    that opens this guide.
   </p>
   <div class="step" id="home-what-you-are-looking-at">
     <div class="step-body">
@@ -498,7 +549,9 @@
         small window opens over the dashboard.
       </p>
       <ul>
-        <li>It shows the hours booked, the share of the day, and that day's events.</li>
+        <li>It shows the hours booked, the share of the day, how full the day is —
+            <em>Today is filling up. A good day to say NO.</em>, in the dashboard's
+            colour — and that day's events.</li>
         <li><strong>Longest / Shortest / By time</strong> changes the order of the
             list.</li>
         <li>Tap an event that has not ended yet to <strong>leave it out</strong> or set
@@ -525,6 +578,8 @@
             colour, the fuller the day.</li>
         <li><strong>Tap a box</strong> to see only that day's events; tap it again for
             all of them.</li>
+        <li>The same line says how full the stretch is: <em>This week is filling up.
+            A good week to say NO.</em></li>
         <li>The list sorts and answers to a tap the same way as the day window. A long
             list shows the first eight, with <strong>Show all</strong> under them.</li>
       </ul>
@@ -1210,9 +1265,16 @@
       <ul>
         <li><strong>Unavailable</strong> stays until <em>you</em> change it, through
             midnight and beyond.</li>
-        <li><strong>Stretched</strong> is raised once, by the first event of a day that
-            is booked past what it holds. From then on, a meeting starting, ending or
-            being added does not move it.</li>
+        <li><strong>Stretched</strong> is raised by the first event of a day that is
+            booked past what it holds, in either mode.</li>
+        <li>In <strong>Work</strong> mode it stays for the rest of the day, and switching
+            into Work keeps it. A meeting starting, ending or being added does not move
+            it.</li>
+        <li>In <strong>Life</strong> mode it is only there while an event runs: each
+            event on that day raises it, and you are back to your own status when it
+            ends. Switching into Life during an event keeps it until the event ends.</li>
+        <li>Move off Stretched yourself on a Work day and BAI stops raising it that day:
+            meetings take you to Heads-down and then back to the status you set.</li>
         <li>Change your mind about the load — <strong>set events aside</strong> with
             <em>Don't count</em>, or delete or shorten them — and if the day is no longer
             overloaded, the Stretched BAI raised <strong>comes down by itself</strong>
@@ -1310,9 +1372,13 @@
     <div class="step-body">
       <h3><span class="num">3</span>Mode switches and reminders</h3>
       <ul>
-        <li><strong>Work hours starting or ending</strong> — BAI tells you at each block's
-            start and end. On Android, allow <em>Alarms &amp; reminders</em> when BAI asks
-            (once) so these arrive on the minute even with the screen off.</li>
+        <li><strong>Work hours starting or ending</strong> — with Fixed or Custom hours,
+            BAI tells you <strong>15 minutes before</strong> each start and end, with
+            buttons to move it later for that day
+            (<a href="#pillars-starting-late-or-staying-on">Daily use, step 8</a>). The
+            switch itself then happens on time, with a banner if BAI is open. On Android,
+            allow <em>Alarms &amp; reminders</em> when BAI asks (once) so these arrive on
+            the minute even with the screen off.</li>
         <li><strong>Arriving at a pinned place</strong> — a note that BAI has moved you.</li>
         <li><strong>By Focus</strong> — said in the app when you open BAI, since iPhone
             cannot tell BAI while it is closed.</li>
@@ -1328,11 +1394,16 @@
             question <em>Did you work outside your hours yesterday?</em> (or
             <em>over the weekend?</em>) with an <strong>Answer</strong> button
             (<a href="#pillars">Daily use, step 6</a>).</li>
+        <li><strong>How did yesterday go?</strong> — in the app only, the morning after
+            a work day (<a href="#mood-how-did-yesterday-go">Mood</a>). When the
+            question about work outside your hours is due too, both come in one
+            banner.</li>
       </ul>
     </div>
     <figure>
       <img src="img/alert-banner.png" alt="An in-app banner telling the participant BAI switched them to Work mode" onerror="shotMissing(this)">
-      <figcaption>Alerts · in the app</figcaption>
+      <img src="img/heads-up-banner.png" alt="The dashboard with a banner reading Work starts at 9:00am, BAI switches you to Work mode then, and a Later button" onerror="shotMissing(this)">
+      <figcaption>Alerts · in the app, and 15 minutes before</figcaption>
     </figure>
   </div>
 </section>
@@ -1404,6 +1475,35 @@
     </figure>
   </div>
 
+  <div class="step" id="mood-how-did-yesterday-go">
+    <div class="step-body">
+      <h3><span class="num">4</span>How did yesterday go? <span class="new">New</span></h3>
+      <p>
+        The morning after a work day, BAI may ask <strong>How did yesterday go?</strong>
+        It is a look back at how the day felt to get through, whatever was on your
+        calendar. Tap <strong>Answer</strong> and pick one: <em>Went really well</em>,
+        <em>Went well</em>, <em>Mixed</em>, <em>Hard going</em> or <em>Very hard
+        going</em>, then <strong>Save</strong>.
+      </p>
+      <ul>
+        <li>It is <strong>optional</strong>, and only ever in the app, never on the lock
+            screen. Your answer is saved and changes nothing else.</li>
+        <li>It asks at most once a day, only about yesterday, and only when yesterday was
+            a work day. With your schedule off, it does not ask.</li>
+        <li>Let it pass three times in a row and it rests for a week. Answering any
+            day keeps it coming.</li>
+        <li>When BAI also wants to know about work outside your hours yesterday, both
+            questions come in one banner and one sheet. If you already set that time
+            with the yellow line, you only get this one.</li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/day-rating-banner.png" alt="The dashboard with a banner reading How did yesterday go? Optional. How the day felt to get through., and an Answer button" onerror="shotMissing(this)">
+      <img src="img/day-rating.png" alt="The How did yesterday go? sheet with five choices, Went really well, Went well (selected), Mixed, Hard going and Very hard going, and a Save button" onerror="shotMissing(this)">
+      <figcaption>The morning after a work day · optional</figcaption>
+    </figure>
+  </div>
+
 </section>
 
 <section id="insights">
@@ -1433,8 +1533,10 @@
     <div class="step-body">
       <h3><span class="num">2</span>Where your time went, and how you felt</h3>
       <p>
-        <strong>Where your time went</strong> splits your logged hours by status, so you
-        can see how much of the week you spent holding people off.
+        <strong>Where your time went</strong> splits the time a status was set — by you,
+        or by your calendar — by status, so you can see how much of the week you spent
+        holding people off. The status BAI rests on when your mode changes (Available
+        in Life, Busy in Work) is not counted, so your nights are not in it.
       </p>
       <p>
         <strong>How you've felt</strong> sums up your check-ins in words, not numbers:
@@ -1468,6 +1570,10 @@
         If you change your schedule, the count starts again from that moment. Days you
         worked before the change are not measured against the new hours.
       </p>
+      <p>
+        Time you chose to stay on from the 15-minute heads-up still counts as outside
+        your hours, and BAI says how much of it you chose.
+      </p>
       <p class="why">
         This is the boundary, measured. Hours outside your own window are the number to
         watch.
@@ -1499,11 +1605,11 @@
       <p>
         The work you did in Life mode that was not on your calendar: the time you set
         with the yellow line on the dashboard, and what you answered when BAI asked the
-        next day. It shows the hours and days for the week, and the total over four
-        weeks.
+        next day. It shows the hours, and the days it happened on, over the last 7
+        days.
       </p>
       <p>
-        It appears once you have recorded some. It is not part of your work hours, and
+        It appears once you have recorded some that week. It is not part of your work hours, and
         calendar events in Life mode are counted separately, under
         <em>Events in your personal time</em>.
       </p>
@@ -1519,12 +1625,14 @@
       <h3><span class="num">5</span>What stands out</h3>
       <p>
         The last panel is written in sentences: patterns BAI has noticed across the
-        period, such as work touching every working day, or less room as the week goes on.
+        period, such as most of the week spent Heads-down or heavier, less room as the
+        week goes on, or work outside your hours adding up.
       </p>
       <p>
         Once there have been three overloaded days in four weeks, it also says what
-        happened on them — whether you kept <em>Stretched</em> or changed it, by hand or
-        after a check-in — and whether those days felt heavier than the rest.
+        happened on them — whether you left <em>Stretched</em> as BAI set it or changed
+        it, by hand or after a check-in — and whether those days felt heavier than the
+        rest.
       </p>
       <p class="why">
         These are observations, not instructions. They are there to be recognised or
@@ -1532,7 +1640,7 @@
       </p>
     </div>
     <figure>
-      <img src="img/insights-standout.png" alt="What stands out in Insights, with two observations: Work touched every work day, and Fridays run heaviest">
+      <img src="img/insights-standout.png" alt="What stands out in Insights, with two observations: Mostly guarded, 63% of the time you or your calendar set a status this week was Heads-down or heavier; and 4.5h of work outside hours, on 3 days">
       <figcaption>Insights · what stands out</figcaption>
     </figure>
   </div>
