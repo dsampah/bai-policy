@@ -199,7 +199,7 @@
 <header>
   <h1>Using BAI</h1>
   <!-- Change this date whenever the guide is edited. -->
-  <p class="updated">Last updated: 16 October 2026</p>
+  <p class="updated">Last updated: 26 October 2026</p>
   <p class="lede">
     BAI helps you understand your workload and become more aware of your work-life boundaries. 
     It can support you in communicating and negotiating these boundaries with others, 
@@ -382,8 +382,10 @@
         line on any day brings the question back straight away.
       </p>
       <p class="pillar-when">
-        The line can be tapped while your schedule is on. With the schedule off, switch
-        to Work by hand instead. <a href="#insights">Where the hours show up</a>.
+        You start it while your schedule is on. If you switch the schedule off while it
+        runs, it carries on to the time you set, and you can still change or end it.
+        With the schedule off, switch to Work by hand instead.
+        <a href="#insights">Where the hours show up</a>.
       </p>
     </div>
     <figure>
@@ -455,6 +457,37 @@
       <figcaption>15 minutes before · move it for today</figcaption>
     </figure>
   </div>
+
+  <div class="step" id="pillars-your-week-at-the-end-of-it">
+    <div class="step-body">
+      <h3><span class="num">9</span>Your week, at the end of it <span class="new">New</span></h3>
+      <p>
+        At 16:00 on your last work day of the week (Friday, for most people), BAI sends
+        <em>Your week in BAI</em>. Tap it, or <strong>See it</strong> if BAI is open, and
+        Insights opens with a <strong>Your last 7 days</strong> card on top:
+      </p>
+      <ul>
+        <li>how many days were overloaded,</li>
+        <li>hours you worked outside your hours, and Work mode past your schedule,</li>
+        <li>the status you were in most,</li>
+        <li>how you felt on average.</li>
+      </ul>
+      <p>
+        Only the lines with something behind them are shown. The notification itself
+        has no figures: it is sent with BAI closed, so the numbers are worked out
+        when you open it.
+      </p>
+      <p class="pillar-when">
+        It comes whether your schedule is on or off. It skips a week with too little
+        in it (fewer than two days with work, a check-in or a status change) and the
+        weeks you are on holiday.
+      </p>
+    </div>
+    <figure>
+      <img src="img/look-back-card.png" alt="Insights with the Your last 7 days card on top: 2 overloaded days, 3 hours worked outside your hours, Mostly Busy, and the average mood" onerror="shotMissing(this)">
+      <figcaption>Friday 16:00 · your last 7 days</figcaption>
+    </figure>
+  </div>
 </section>
 
 <!-- Shortcuts: one line per thing people come here for, each going straight to
@@ -479,6 +512,7 @@
     <li><a href="#pillars-say-when-you-work-outside-your">say I am working outside my hours</a></li>
     <li><a href="#pillars-see-what-your-hours-are-made-of">see which events make up my hours</a></li>
     <li><a href="#pillars-starting-late-or-staying-on">start work later or stay on today</a></li>
+    <li><a href="#pillars-your-week-at-the-end-of-it">look back at my week</a></li>
     <li><a href="#mood-how-did-yesterday-go">say how yesterday went</a></li>
     <li><a href="#schedule-what-counts">find out why my day looks too full</a></li>
     <li><a href="#alerts-today-is-overloaded">understand an overloaded alert</a></li>
@@ -487,7 +521,7 @@
     <li><a href="#controls-by-location-pin-the-places">switch mode by where I am</a></li>
     <li><a href="#controls-by-focus-and-by-do-not">switch mode with Focus or Do Not Disturb</a></li>
     <li><a href="#controls-switching-by-hand-with-the-schedule">switch to Work by hand</a></li>
-    <li><a href="#controls-turn-the-schedule-on">turn BAI off for a holiday</a></li>
+    <li><a href="#controls-going-on-holiday">turn BAI off for a holiday</a></li>
     <li><a href="#controls-calendars-on-this-phone">choose which calendars count</a></li>
     <li><a href="#controls-connect-a-calendar-by-its-link">connect a calendar by its link</a></li>
     <li><a href="#status-partly-available-an-agreed-arrangement">set a part-time arrangement</a></li>
@@ -613,7 +647,7 @@
       </p>
       <p class="why">
         Turn the schedule off on holidays and days off. BAI then leaves your mode
-        alone until you switch it back on.
+        alone until the schedule is back on.
       </p>
     </div>
     <figure>
@@ -622,9 +656,40 @@
     </figure>
   </div>
 
+  <div class="step" id="controls-going-on-holiday">
+    <div class="step-body">
+      <h3><span class="num">1a</span>Going on holiday? Tell BAI when you are back <span class="new">New</span></h3>
+      <p>
+        Switching the schedule off asks <strong>Turning your schedule off</strong>, with
+        two answers:
+      </p>
+      <ul>
+        <li><strong>Holiday or days off</strong>: pick the day you are back (tap one
+            day), or mark the days you are away (drag across them; you are back the day
+            after). Controls then says <em>Off until …</em>. On that day BAI turns your
+            schedule back on by itself and sends one notification at 08:00:
+            <em>Welcome back</em>. Open BAI once that day so it can pick up switching
+            your modes.</li>
+        <li><strong>I'll switch modes myself</strong>: the schedule goes off and stays
+            off until you turn it on. No reminders.</li>
+      </ul>
+      <p>
+        Close the question without answering and the schedule stays on. Coming back
+        early? Switch the schedule on yourself; that ends the time off.
+      </p>
+      <p class="why">
+        While you are away, BAI stops its mood reminders and skips the weekly look-back.
+      </p>
+    </div>
+    <figure>
+      <img src="img/schedule-off-question.png" alt="The Turning your schedule off sheet, with Holiday or days off and I'll switch modes myself" onerror="shotMissing(this)">
+      <figcaption>Controls · switching the schedule off</figcaption>
+    </figure>
+  </div>
+
   <div class="step" id="controls-switching-by-hand-with-the-schedule">
     <div class="step-body">
-      <h3><span class="num">1a</span>Switching by hand, with the schedule off</h3>
+      <h3><span class="num">1b</span>Switching by hand, with the schedule off</h3>
       <p>
         With the schedule off, tap the <strong>mode chip</strong> on the dashboard and
         choose Work. Coming from Life mode, BAI asks
@@ -652,7 +717,7 @@
 
   <div class="step" id="controls-told-twice-never-both">
     <div class="step-body">
-      <h3><span class="num">1b</span>Told twice, never both</h3>
+      <h3><span class="num">1c</span>Told twice, never both</h3>
       <p>
         Choosing a length shows a banner straight away, naming the time you will be
         switched back. When that moment comes, BAI tells you the same way it tells you
@@ -1384,6 +1449,14 @@
             cannot tell BAI while it is closed.</li>
         <li><strong>Reminders</strong> — no places pinned yet, By Focus not set up, or
             still in Work mode after two days. Usually a setting that needs a look.</li>
+        <li><strong>Still in Life mode</strong> — after five work days in Life with the
+            schedule on (weekends not counted), then every five work days. On holiday?
+            Switch the schedule off and tell BAI when you are back
+            (<a href="#controls-going-on-holiday">Controls, step 1a</a>).</li>
+        <li><strong>Welcome back</strong> — 08:00 on the day you said you are back from
+            time off: your schedule is on again.</li>
+        <li><strong>Your week in BAI</strong> — 16:00 on your last work day of the week
+            (<a href="#pillars-your-week-at-the-end-of-it">Daily use, step 9</a>).</li>
         <li><strong>How available are you?</strong> — after five work days without a mood
             check-in (two if your calendar is off or none is connected). Tap it to
             check in.</li>
