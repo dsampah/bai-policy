@@ -30,9 +30,12 @@ postdoctoral researchers and PhD research fellows. A maximum of 20 participants.
 Participants are adults; the study does not involve minors.
 
 **Recruitment is closed, and consent was given before the app.** The project's
-participants were recruited and enrolled in earlier phases of the study, and
-each gave written informed consent to the study team at that time, before BAI
-existed. **No new participants are being recruited**, and there is no way to
+participants were recruited and enrolled in earlier phases of the study, before
+BAI existed, and each gave informed consent at that time in one of two ways:
+by signing up to the study on a web form; or orally, in a face-to-face meeting
+in which a researcher explained the study and what taking part involves, after
+which the participant agreed to take part and the researcher signed them up
+through the same web form. **No new participants are being recruited**, and there is no way to
 join the study through the app: BAI has no sign-up, and a person who is not
 already on the participant roster cannot sign in or use any part of it. The
 roster is how the consent given earlier is enforced in the software.
