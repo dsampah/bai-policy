@@ -29,9 +29,9 @@ towards a PhD in Informatics. Data collected is used for this project only.
 postdoctoral researchers and PhD research fellows. A maximum of 20 participants.
 Participants are adults; the study does not involve minors.
 
-**Recruitment is closed, and consent was given before the app.** The project's
-participants were recruited and enrolled in earlier phases of the study, before
-BAI existed, and each gave informed consent at that time in one of two ways:
+**Recruitment is closed, and consent was given before using the app.** The project's
+participants were recruited and enrolled in earlier phases of the study and
+after the participatory co-design, when the BAI app went live, and each gave informed consent at that time in one of two ways:
 by signing up to the study on a web form; or orally, in a face-to-face meeting
 in which a researcher explained the study and what taking part involves, after
 which the participant agreed to take part and the researcher signed them up
