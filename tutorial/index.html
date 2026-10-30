@@ -199,7 +199,7 @@
 <header>
   <h1>Using BAI</h1>
   <!-- Change this date whenever the guide is edited. -->
-  <p class="updated">Last updated: 29 October 2026</p>
+  <p class="updated">Last updated: 30 October 2026</p>
   <p class="lede">
     BAI helps you understand your workload and become more aware of your work-life boundaries. 
     It can support you in communicating and negotiating these boundaries with others, 
@@ -506,39 +506,57 @@
         BAI looks at your load and, when it gets heavy, says what break would help. It
         never sends this on its own; you see it when you look: <strong>tap the
         figures</strong> on the dashboard's bottom card, on the Today, Week or Month
-        tab, and the window or page that opens shows a <em>Break</em> note.
+        tab, or <strong>open a day on Schedule</strong>, and a <em>Break</em> note
+        shows when the load calls for one.
       </p>
       <ul>
-        <li><strong>Today</strong>: after 2 hours or more back to back (a gap of 10
-            minutes counts as a break), or a long or overloaded day, for example <em>keep 15 minutes free at 12:30, right after your back-to-back meetings</em>, or
-            <em>take at least 30 minutes away today</em>. The gaps are measured inside
-            your work hours when you use Fixed or Custom hours.</li>
+        <li><strong>A day</strong>: after 2 hours or more back to back (a gap of 10
+            minutes already counts as a break), on a filling-up day, or on a long or
+            overloaded day. The length follows the load: 10 minutes after 2 hours
+            back to back, up to 20 after 4 hours or more; 20 for an 8-hour day, 30
+            for an overloaded one, 45 for 10 hours or more. For example <em>step away
+            from work for 15 minutes at 12:30, right after your back-to-back
+            meetings</em>. The free time is the gaps between your events, whatever
+            schedule you use, and it never suggests more minutes than the gap holds.
+            Today in Work mode it says <em>step away from work</em>; in Life mode,
+            and for days ahead, just <em>step away</em>. A stretch that ends your day
+            gets nothing (the evening is the break), and days off get no break
+            notes.</li>
         <li><strong>This week</strong>: after two overloaded days, 4 hours or more of
-            work outside your hours, or 55 hours or more booked, it says what it saw and names an evening
-            and a day off still free, for example <em>6.5h worked outside your hours
-            this week. Keep Thursday evening and Saturday free of work</em>. This can
-            show even in a week the card calls balanced, because the card goes by
-            your average load.</li>
-        <li><strong>This month</strong>: after several heavy weeks,
-            <em>plan a day or two off in the next two weeks</em>. Short breaks
-            help more than saving up for one long holiday: the benefit of a holiday
-            fades within about a week of going back.</li>
+            work outside your hours, or 55 hours or more booked, it says what it saw
+            and names an evening still free, for example <em>6.5h worked outside
+            your hours this week. Keep Thursday evening free of work</em>. When the
+            week is well over, it names a free day off as well. This can show even
+            in a week the card calls balanced, because the card goes by your average
+            load.</li>
+        <li><strong>This month</strong>: after several heavy weeks, <em>plan a day
+            off in the next two weeks</em>, or two days off when it is heavier. Short
+            breaks help more than saving up for one long holiday: the benefit of a
+            holiday fades within about a week of going back.</li>
+        <li><strong>Dates you pick</strong> <span class="new">New</span>: choose a
+            range with the calendar button on the dashboard (then tap the figures), or
+            check dates on Schedule, and the result says what break those dates call
+            for, for example <em>3 overloaded days in these dates. Keep Mon 9 Nov
+            evening and Sat 14 Nov free of work</em>, or <em>These dates are filling
+            up. Keep Mon 9 Nov evening free of work</em>. Nothing for dates that have
+            gone.</li>
         <li><strong>After a mood check-in</strong> of Stressed, Overwhelmed or Burned
-            out while you are at work (in Work mode, and inside your work hours when
-            BAI knows them), the status that opens suggests a break at your next free
-            time, with
-            <strong>Remind me at …</strong>. Tap it and BAI reminds you then, on the
-            lock screen or in the app. After Tired, you get the suggestion without the
+            out on a work day, the status that opens suggests your next free time,
+            with <strong>Remind me at …</strong>. Tap it and BAI reminds you then, on
+            the lock screen or in the app. In Work mode it reads <em>Take a break …
+            step away from work for 15 minutes</em>; in Life mode simply <em>step
+            away for 15 minutes</em>. After Tired, you get the suggestion without the
             button.</li>
       </ul>
       <p class="pillar-when">
-        If your check-ins have been heavy for a few days, the week and month lines come
-        sooner. Nothing shows when your load is ordinary.
+        If your check-ins have been heavy for a few days, the breaks come sooner and
+        today's and tomorrow's run a step longer. On a Partly available arrangement
+        the hours scale with your level. Nothing shows when your load is ordinary.
       </p>
     </div>
     <figure>
-      <img src="img/break-line.png" alt="The window that opens from the dashboard's figures on a heavy day, with a Break note reading Keep 15 minutes free at 12:30, right after your back-to-back meetings" onerror="shotMissing(this)">
-      <img style="margin-top:18px" src="img/break-check-in.png" alt="The status pop-up after a Stressed check-in, with a Break section and a Remind me at 14:00 button" onerror="shotMissing(this)">
+      <img src="img/break-line.png" alt="The window that opens from the dashboard's figures on a heavy day, with a Break note reading Step away from work for 15 minutes at 12:30, right after your back-to-back meetings" onerror="shotMissing(this)">
+      <img style="margin-top:18px" src="img/break-check-in.png" alt="The status pop-up after a Stressed check-in, with a Break section and a Remind me at 12:30pm button" onerror="shotMissing(this)">
       <figcaption>Tap the figures · after a heavy check-in</figcaption>
     </figure>
   </div>
@@ -1085,6 +1103,13 @@
         Below that, every event on the chosen day, with its share of your capacity.
         Finished ones are struck through.
       </p>
+      <p>
+        <span class="new">New</span> When the chosen day calls for a break, a
+        <em>Break</em> note sits under the week strip, for example <em>Step away
+        for 15 minutes at 12:00 on Mon 9 Nov, right after your 3-hour event</em>
+        (<a href="#pillars-a-break-when-your-load-calls-for-one">more about
+        breaks</a>).
+      </p>
     </div>
     <figure>
       <img src="img/schedule-events.png" alt="Schedule screen listing today's events with the share of capacity each one spent">
@@ -1138,6 +1163,12 @@
         holds a limited window; this reads your calendar fresh for whatever dates you
         asked about, so a month out is answered as reliably as tomorrow.
       </div>
+      <p>
+        <span class="new">New</span> When the dates are heavy, the answer also says
+        what break they call for, for example <em>Break: 3 overloaded days in these
+        dates. Keep Mon 9 Nov evening and Sat 14 Nov free of work</em>
+        (<a href="#pillars-a-break-when-your-load-calls-for-one">more about breaks</a>).
+      </p>
       <p class="why">
         This is the one to reach for when somebody asks you to commit to a date, which
         is exactly when the diary is hardest to hold in your head.
